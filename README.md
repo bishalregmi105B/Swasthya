@@ -7,7 +7,7 @@
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![Google AI](https://img.shields.io/badge/Google_Gemini_2.0-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![AI](https://img.shields.io/badge/g4f_Multi--Model_AI-FF6B6B?style=for-the-badge&logo=openai&logoColor=white)
 
 ---
 
@@ -159,14 +159,14 @@ Nepal faces critical healthcare challenges:
 |-----------|------------|
 | **Framework** | Flask (Python 3.11+) |
 | **Database** | MySQL |
-| **AI/ML** | Google Gemini 2.0 Flash |
-| **Voice AI** | Google TTS/STT, WebSocket streaming |
+| **AI/ML** | g4f (GPT-4, Claude, Gemini, Llama) |
+| **Voice AI** | Edge TTS, WebSocket streaming |
 | **Caching** | Hive (mobile), Redis (production) |
 
 ### External APIs
 | Service | Purpose |
 |---------|---------|
-| **Google Gemini 2.0** | AI chat, medical analysis, voice |
+| **g4f** | Multi-model AI (GPT-4, Claude, Gemini, Llama) |
 | **FDA OpenFDA** | Drug information & safety data |
 | **OpenWeather** | Weather-health correlation |
 | **Jitsi Meet** | Video consultations |
@@ -205,10 +205,10 @@ Nepal faces critical healthcare challenges:
 │                      DATA & AI LAYER                              │
 ├──────────────────────────────────────────────────────────────────┤
 │  ┌─────────────┐  ┌─────────────────┐  ┌──────────────────────┐ │
-│  │ PostgreSQL  │  │ Google Gemini   │  │   External APIs      │ │
-│  │ • Users     │  │ • 2.0 Flash     │  │   • FDA OpenFDA      │ │
-│  │ • Records   │  │ • Live Voice    │  │   • OpenWeather      │ │
-│  │ • History   │  │ • Image Analysis│  │   • Jitsi Meet       │ │
+│  │   MySQL     │  │   g4f Package   │  │   External APIs      │ │
+│  │ • Users     │  │ • GPT-4/Claude  │  │   • FDA OpenFDA      │ │
+│  │ • Records   │  │ • Gemini/Llama  │  │   • OpenWeather      │ │
+│  │ • History   │  │ • Multimodal    │  │   • Jitsi Meet       │ │
 │  └─────────────┘  └─────────────────┘  └──────────────────────┘ │
 └──────────────────────────────────────────────────────────────────┘
 ```
@@ -258,7 +258,7 @@ cd backend
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env  # Add API keys
-uvicorn app.main:app --reload --port 8000
+python run.py
 ```
 
 ### Mobile

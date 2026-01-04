@@ -78,14 +78,14 @@ FDA_API_KEY=your_fda_key (optional)
 OPENWEATHER_API_KEY=your_weather_key
 ```
 
-## 🤖 AI Features
+## 🤖 AI Features (g4f Package)
 
-| Feature | Provider | Description |
-|---------|----------|-------------|
-| Chat | Gemini 2.0 | Bilingual health chat |
-| Voice Calls | Gemini Live | Real-time voice streaming |
-| Report Analysis | Gemini Vision | MRI/CT/Lab OCR |
-| Symptom Analysis | Gemini | Triage recommendations |
+| Feature | Models | Description |
+|---------|--------|-------------|
+| Chat | GPT-4, Claude, Gemini | Bilingual health chat |
+| Voice Calls | Edge TTS | Real-time voice streaming |
+| Report Analysis | GPT-4 Vision, Gemini | MRI/CT/Lab OCR |
+| Symptom Analysis | Claude, GPT-4 | Triage recommendations |
 
 ## 🔨 Database
 
