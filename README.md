@@ -5,8 +5,8 @@
 
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![Google AI](https://img.shields.io/badge/Google_Gemini_2.0-4285F4?style=for-the-badge&logo=google&logoColor=white)
 
 ---
@@ -157,8 +157,8 @@ Nepal faces critical healthcare challenges:
 ### Backend
 | Component | Technology |
 |-----------|------------|
-| **Framework** | FastAPI (Python 3.11+) |
-| **Database** | PostgreSQL with asyncpg |
+| **Framework** | Flask (Python 3.11+) |
+| **Database** | MySQL |
 | **AI/ML** | Google Gemini 2.0 Flash |
 | **Voice AI** | Google TTS/STT, WebSocket streaming |
 | **Caching** | Hive (mobile), Redis (production) |
@@ -190,7 +190,7 @@ Nepal faces critical healthcare challenges:
              │         REST API + WebSocket │
              ▼                              ▼
 ┌──────────────────────────────────────────────────────────────────┐
-│                      API LAYER (FastAPI)                          │
+│                      API LAYER (Flask)                              │
 ├──────────────────────────────────────────────────────────────────┤
 │  ┌──────────┬──────────┬──────────┬──────────┬────────────────┐ │
 │  │ AI Saathi│ Medical  │ Doctors  │ Emergency│   Simulations  │ │
@@ -219,7 +219,7 @@ Nepal faces critical healthcare challenges:
 
 ```
 Swasthya/
-├── backend/                 # FastAPI Backend (24 API modules)
+├── backend/                 # Flask Backend (24 API modules)
 │   ├── app/routes/
 │   │   ├── ai_sathi.py      # AI chat, symptoms, analysis
 │   │   ├── live_ai_call.py  # WebSocket voice streaming

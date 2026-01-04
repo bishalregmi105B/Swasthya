@@ -1,16 +1,97 @@
-# swasthya
+# 📱 Swasthya Mobile App
 
-A new Flutter project.
+> Flutter-based cross-platform mobile application for Android & iOS
 
-## Getting Started
+## 🚀 Quick Start
 
-This project is a starting point for a Flutter application.
+```bash
+# Install dependencies
+flutter pub get
 
-A few resources to get you started if this is your first Flutter project:
+# Run on device/emulator
+flutter run
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# Build release APK
+flutter build apk --release
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Build iOS (requires macOS)
+flutter build ios --release
+```
+
+## 📁 Project Structure
+
+```
+lib/
+├── config/           # Theme, routes, constants
+├── l10n/             # Localization (English + Nepali)
+├── models/           # Data models
+├── providers/        # State management (Provider)
+├── screens/          # 24 screen modules
+│   ├── ai_sathi/     # AI chat, scan, history
+│   ├── appointments/ # Booking & video calls
+│   ├── doctors/      # Doctor search & profiles
+│   ├── emergency/    # SOS & contacts
+│   ├── home/         # Dashboard
+│   ├── medical_history/  # Health records
+│   ├── simulation/   # CPR training
+│   └── ...
+├── services/         # API, cache, notifications
+└── widgets/          # Reusable components
+```
+
+## ✨ Key Features
+
+| Feature | Description |
+|---------|-------------|
+| **AI Saathi** | Bilingual AI chat & voice calls |
+| **Medical Report Scanner** | MRI/CT/Lab analysis with OCR |
+| **Video Consultations** | Jitsi Meet integration |
+| **Offline-First** | Cached data for rural areas |
+| **Emergency SOS** | One-tap emergency calls |
+| **CPR Simulation** | Interactive first-aid training |
+| **Medicine Reminders** | Push notifications with alarms |
+
+## 🔧 Dependencies
+
+| Package | Purpose |
+|---------|---------|
+| `provider` | State management |
+| `go_router` | Navigation |
+| `hive_flutter` | Offline storage |
+| `url_launcher` | External links & calls |
+| `jitsi_meet_flutter_sdk` | Video calls |
+| `flutter_local_notifications` | Reminders |
+| `image_picker` | Document upload |
+| `flutter_tts` or `edgetts` | Voice guidance |
+
+## 🌐 Localization
+
+Supports English and Nepali. Add translations in:
+- `lib/l10n/app_en.arb`
+- `lib/l10n/app_ne.arb`
+
+## 📝 Environment
+
+Create `.env` file if needed for API configuration:
+```
+API_BASE_URL=http://your-backend-url:8000
+```
+
+## 🔨 Build Commands
+
+```bash
+# Debug build
+flutter run --debug
+
+# Release APK
+flutter build apk --release
+
+# App Bundle for Play Store
+flutter build appbundle --release
+
+# Analyze code
+flutter analyze
+
+# Run tests
+flutter test
+```
