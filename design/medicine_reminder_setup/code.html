@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Medicine Reminder Setup</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                        "surface-dark": "#1C232E",
+                        "surface-light": "#FFFFFF",
+                        "border-dark": "#2A3441",
+                        "border-light": "#E5E7EB",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hide for horizontal scrolling */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display antialiased">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden text-slate-900 dark:text-white">
+<!-- Header -->
+<div class="sticky top-0 z-10 flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between border-b border-border-light dark:border-border-dark/50 backdrop-blur-md bg-opacity-90 dark:bg-opacity-90">
+<div class="text-slate-900 dark:text-white flex size-12 shrink-0 items-center justify-start cursor-pointer">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">Add Reminder</h2>
+<div class="flex w-12 items-center justify-end absolute right-4 top-4 h-full">
+<!-- Placeholder for layout balance, actual save is in footer for better UX or here -->
+<p class="text-primary text-base font-bold leading-normal tracking-[0.015em] shrink-0 cursor-pointer">Save</p>
+</div>
+</div>
+<!-- Main Content -->
+<div class="flex flex-col gap-6 px-4 py-6 pb-32">
+<!-- Medicine Name Input -->
+<div class="flex flex-col gap-2">
+<label class="text-slate-900 dark:text-white text-base font-medium leading-normal">Medicine Name</label>
+<div class="relative flex w-full items-center rounded-xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark focus-within:border-primary transition-colors">
+<input class="flex w-full min-w-0 flex-1 bg-transparent text-slate-900 dark:text-white focus:outline-0 focus:ring-0 border-none h-14 placeholder:text-slate-400 dark:placeholder:text-slate-500 pl-4 pr-12 text-base font-normal leading-normal rounded-xl" placeholder="Search medicine (e.g., Atorvastatin)..." value=""/>
+<div class="absolute right-0 flex items-center justify-center pr-4 text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined">search</span>
+</div>
+</div>
+</div>
+<!-- Form Factor (Chips) -->
+<div class="flex flex-col gap-2">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal">Form</p>
+<div class="flex gap-3 overflow-x-auto no-scrollbar pb-1">
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary pl-5 pr-5 cursor-pointer shadow-lg shadow-primary/20 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-white text-[18px]">pill</span>
+<p class="text-white text-sm font-medium leading-normal">Pill</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark pl-5 pr-5 cursor-pointer hover:bg-gray-100 dark:hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 text-[18px]">tablet</span>
+<p class="text-slate-600 dark:text-slate-300 text-sm font-medium leading-normal">Tablet</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark pl-5 pr-5 cursor-pointer hover:bg-gray-100 dark:hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 text-[18px]">vaccines</span>
+<p class="text-slate-600 dark:text-slate-300 text-sm font-medium leading-normal">Injection</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark pl-5 pr-5 cursor-pointer hover:bg-gray-100 dark:hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 text-[18px]">water_drop</span>
+<p class="text-slate-600 dark:text-slate-300 text-sm font-medium leading-normal">Liquid</p>
+</div>
+</div>
+</div>
+<!-- Dosage Section -->
+<div class="flex flex-col gap-2">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight pb-1">Dosage</h3>
+<div class="flex gap-4">
+<label class="flex flex-col min-w-40 flex-1 gap-2">
+<span class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">Strength</span>
+<div class="flex items-center rounded-xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark px-4 h-14">
+<input class="flex-1 bg-transparent text-slate-900 dark:text-white focus:outline-none border-none p-0 text-base" type="number" value="20"/>
+</div>
+</label>
+<label class="flex flex-col min-w-32 w-1/3 gap-2">
+<span class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">Unit</span>
+<div class="flex items-center justify-between rounded-xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark px-4 h-14 cursor-pointer">
+<span class="text-slate-900 dark:text-white text-base">mg</span>
+<span class="material-symbols-outlined text-slate-400 text-sm">expand_more</span>
+</div>
+</label>
+</div>
+</div>
+<!-- AI Insight Card -->
+<div class="rounded-xl bg-blue-50 dark:bg-primary/10 border border-blue-200 dark:border-primary/20 p-4 flex gap-3 items-start">
+<div class="bg-primary/20 rounded-full p-1.5 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-sm">auto_awesome</span>
+</div>
+<div class="flex flex-col gap-1">
+<h4 class="text-primary font-bold text-sm">AI Insight</h4>
+<p class="text-slate-700 dark:text-blue-100/80 text-sm leading-relaxed">
+                        Atorvastatin is generally most effective when taken in the evening. Would you like to set the reminder for 8:00 PM?
+                    </p>
+<div class="flex gap-3 mt-2">
+<button class="text-xs font-semibold text-primary bg-background-light dark:bg-background-dark/50 px-3 py-1.5 rounded-md hover:bg-white dark:hover:bg-primary/20 transition-colors">Apply Suggestion</button>
+</div>
+</div>
+</div>
+<!-- Schedule & Frequency -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight">Schedule</h3>
+<span class="text-primary text-sm font-medium cursor-pointer">Edit</span>
+</div>
+<div class="rounded-xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark overflow-hidden">
+<!-- Frequency Row -->
+<div class="flex items-center justify-between p-4 border-b border-border-light dark:border-border-dark cursor-pointer hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center w-8 h-8 rounded-lg bg-purple-500/20 text-purple-400">
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+</div>
+<span class="text-slate-900 dark:text-white font-medium">Frequency</span>
+</div>
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400">
+<span>Every Day</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</div>
+</div>
+<!-- Time Row 1 -->
+<div class="flex items-center justify-between p-4 border-b border-border-light dark:border-border-dark cursor-pointer hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center w-8 h-8 rounded-lg bg-orange-500/20 text-orange-400">
+<span class="material-symbols-outlined text-[20px]">wb_sunny</span>
+</div>
+<span class="text-slate-900 dark:text-white font-medium">Morning Dose</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="bg-background-light dark:bg-background-dark px-2 py-1 rounded text-slate-900 dark:text-white font-mono text-sm border border-border-light dark:border-border-dark">08:00 AM</span>
+</div>
+</div>
+<!-- Time Row 2 -->
+<div class="flex items-center justify-between p-4 cursor-pointer hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center w-8 h-8 rounded-lg bg-indigo-500/20 text-indigo-400">
+<span class="material-symbols-outlined text-[20px]">dark_mode</span>
+</div>
+<span class="text-slate-900 dark:text-white font-medium">Evening Dose</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="bg-background-light dark:bg-background-dark px-2 py-1 rounded text-slate-900 dark:text-white font-mono text-sm border border-border-light dark:border-border-dark">08:00 PM</span>
+</div>
+</div>
+</div>
+<button class="flex items-center justify-center gap-2 py-3 w-full rounded-xl border border-dashed border-slate-300 dark:border-slate-600 text-slate-500 dark:text-slate-400 hover:bg-surface-light dark:hover:bg-surface-dark transition-colors">
+<span class="material-symbols-outlined text-[20px]">add_alarm</span>
+<span class="font-medium text-sm">Add another time</span>
+</button>
+</div>
+<!-- Settings -->
+<div class="flex flex-col gap-3 pt-2">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight">Settings</h3>
+<div class="rounded-xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark p-4 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-slate-900 dark:text-white font-medium">Refill Reminder</span>
+<span class="text-slate-500 dark:text-slate-400 text-xs mt-0.5">Alert when supply is low</span>
+</div>
+<!-- Switch ON -->
+<div class="w-12 h-7 bg-primary rounded-full relative cursor-pointer transition-colors">
+<div class="w-5 h-5 bg-white rounded-full absolute top-1 right-1 shadow-sm transition-all"></div>
+</div>
+</div>
+<div class="rounded-xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark p-4 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-slate-900 dark:text-white font-medium">Critical Alerts</span>
+<span class="text-slate-500 dark:text-slate-400 text-xs mt-0.5">Play sound even in silent mode</span>
+</div>
+<!-- Switch OFF -->
+<div class="w-12 h-7 bg-slate-300 dark:bg-slate-700 rounded-full relative cursor-pointer transition-colors">
+<div class="w-5 h-5 bg-white rounded-full absolute top-1 left-1 shadow-sm transition-all"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Footer -->
+<div class="fixed bottom-0 left-0 w-full bg-background-light dark:bg-background-dark p-4 pt-2 border-t border-border-light dark:border-border-dark/50 backdrop-blur-xl bg-opacity-95 dark:bg-opacity-95 z-20">
+<button class="flex w-full items-center justify-center rounded-xl bg-primary h-12 gap-2 shadow-lg shadow-primary/25 hover:bg-primary/90 transition-all active:scale-[0.98]">
+<span class="text-white text-base font-bold leading-normal">Save Reminder</span>
+</button>
+</div>
+</div>
+</body></html>

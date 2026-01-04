@@ -1,0 +1,307 @@
+# 🏥 Swasthya - AI-Powered Healthcare Platform
+
+> **LOCUS Hackathon 2026 Project**  
+> *Bridging healthcare gaps in Nepal through AI-powered digital health*
+
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![Google AI](https://img.shields.io/badge/Google_Gemini_2.0-4285F4?style=for-the-badge&logo=google&logoColor=white)
+
+---
+
+## 🎯 Problem Statement
+
+Nepal faces critical healthcare challenges:
+
+| Challenge | Impact |
+|-----------|--------|
+| **Limited Access** | 60% lack easy healthcare access, especially in rural areas |
+| **Language Barrier** | Medical info unavailable in Nepali for most people |
+| **Low Health Literacy** | Poor awareness of disease prevention & health management |
+| **Doctor Shortage** | Only 0.7 doctors per 1,000 (WHO recommends 2.3) |
+| **Delayed Emergency Response** | No centralized emergency services |
+| **Connectivity Issues** | Intermittent internet in remote regions |
+
+---
+
+## 💡 Our Solution
+
+**Swasthya** (स्वास्थ्य - "Health" in Nepali) is a comprehensive **offline-first, rural-focused** AI healthcare platform.
+
+---
+
+## ✨ Key Features
+
+### 🤖 AI Saathi - Bilingual AI Health Assistant
+
+| Feature | Description |
+|---------|-------------|
+| **Bilingual Chat** | Conversational AI in English & Nepali |
+| **Live Voice Calls** | Real-time voice consultations via WebSocket streaming |
+| **Symptom Analysis** | AI-powered symptom checker with triage recommendations |
+| **Specialist Consultations** | Talk to AI physicians, cardiologists, pediatricians, etc. |
+
+### 🔬 AI Medical Report Analyzer
+
+| Feature | Description |
+|---------|-------------|
+| **MRI/CT Scan Analysis** | Upload brain scans, X-rays for AI interpretation |
+| **Lab Report OCR** | Extract & explain blood tests, urine tests in any language |
+| **Prescription Reader** | Understand medications from doctor prescriptions |
+| **Multi-language Support** | Explain results in Nepali or English |
+| **Follow-up Chat** | Ask questions about your uploaded reports |
+
+### 📋 Complete Medical History Management
+
+| Feature | Description |
+|---------|-------------|
+| **Medical Conditions** | Track chronic conditions with severity & AI analysis |
+| **Allergies Database** | Record allergies with severity levels |
+| **Medication Tracker** | Active medications with dosage & frequency |
+| **Surgical History** | Past procedures with hospital records |
+| **Vaccination Records** | Immunization history with dose tracking |
+| **Document Storage** | Upload & organize medical documents |
+| **AI Health Consultation** | Get AI insights on your complete medical history |
+| **Offline Access** | All records cached for offline viewing |
+
+### 🏠 Smart Home Dashboard
+
+| Feature | Description |
+|---------|-------------|
+| **Personalized Health Tips** | AI-generated tips based on your health profile |
+| **Weather-Health Alerts** | Climate-based health warnings (heat, cold, pollution) |
+| **Disease Surveillance** | Real-time outbreak monitoring with AI predictions |
+| **Upcoming Appointments** | Quick view of scheduled consultations |
+| **Quick Actions** | One-tap access to doctors, hospitals, emergency |
+| **Hospital Performance** | Nearby hospitals with ratings & wait times |
+
+### 🚨 Emergency Services
+
+| Feature | Description |
+|---------|-------------|
+| **SOS Button** | One-tap call to 102 (Ambulance) |
+| **Quick Dial** | Emergency numbers: Police (100), Fire (101), Poison (1066) |
+| **Emergency Contacts** | Personal contacts with quick dial |
+| **AI Triage** | Describe emergency for priority assessment |
+| **Offline Access** | Emergency contacts work without internet |
+
+### 🏥 Telemedicine & Doctor Booking
+
+| Feature | Description |
+|---------|-------------|
+| **Doctor Search** | Filter by specialty, experience, rating, fees |
+| **Doctor Profiles** | AI-verified credentials, reviews, availability |
+| **Video Consultations** | Jitsi Meet integration for secure video calls |
+| **Chat Consultations** | 24-hour active chat with doctors |
+| **Appointment Booking** | Select date/time slots, book instantly |
+
+### 💊 Medicine & Pharmacy
+
+| Feature | Description |
+|---------|-------------|
+| **Drug Information** | AI-generated details with FDA data |
+| **Medicine Reminders** | Scheduled notifications with alarm sounds |
+| **Nearby Pharmacies** | GPS-based pharmacy finder with directions |
+| **Online Ordering** | Order medicines for delivery |
+
+### 🩺 Health Calculators & Tools
+
+| Feature | Description |
+|---------|-------------|
+| **BMI Calculator** | Body Mass Index with health recommendations |
+| **Pregnancy Tracker** | Due date calculator & weekly tips |
+| **Heart Rate Monitor** | Camera-based pulse measurement |
+| **Blood Pressure Log** | Track & visualize BP readings |
+
+### 🎮 Emergency Training Simulations
+
+| Feature | Description |
+|---------|-------------|
+| **CPR Simulation** | Interactive step-by-step with voice guidance |
+| **First Aid Training** | Burns, choking, bleeding scenarios |
+| **Compression Counter** | Real-time BPM feedback during practice |
+| **Bilingual Instructions** | English & Nepali voice guidance |
+| **AI Coach** | Ask AI questions during training |
+
+### 🌡️ Weather & Climate Health
+
+| Feature | Description |
+|---------|-------------|
+| **Health-Weather Correlation** | How weather affects your conditions |
+| **Air Quality Index** | Pollution alerts with health impact |
+| **Seasonal Alerts** | Dengue, flu, heat stroke warnings |
+| **Personalized Recommendations** | Tips based on weather + your health |
+
+### � Offline-First Architecture
+
+| Feature | Description |
+|---------|-------------|
+| **Cached Medical Records** | Full history available offline |
+| **Emergency Contacts** | Always accessible, no internet needed |
+| **Health Tips** | Pre-loaded health guidance |
+| **Fallback Data** | Demo data when API unavailable |
+| **Sync on Connect** | Automatic sync when internet returns |
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+| Platform | Technology |
+|----------|------------|
+| **Mobile** | Flutter 3.x, Dart, Provider, GoRouter, Hive |
+| **Web** | Next.js 15, React 19, TypeScript, TailwindCSS |
+
+### Backend
+| Component | Technology |
+|-----------|------------|
+| **Framework** | FastAPI (Python 3.11+) |
+| **Database** | PostgreSQL with asyncpg |
+| **AI/ML** | Google Gemini 2.0 Flash |
+| **Voice AI** | Google TTS/STT, WebSocket streaming |
+| **Caching** | Hive (mobile), Redis (production) |
+
+### External APIs
+| Service | Purpose |
+|---------|---------|
+| **Google Gemini 2.0** | AI chat, medical analysis, voice |
+| **FDA OpenFDA** | Drug information & safety data |
+| **OpenWeather** | Weather-health correlation |
+| **Jitsi Meet** | Video consultations |
+
+---
+
+## 🏗️ Architecture
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│                     PRESENTATION LAYER                            │
+├──────────────────────────────────────────────────────────────────┤
+│  ┌────────────────────┐    ┌──────────────────────────────────┐ │
+│  │   Flutter Mobile   │    │      Next.js Dashboard           │ │
+│  │   (Android/iOS)    │    │   (Hospital/Doctor/Pharmacy)     │ │
+│  │ • Offline-First    │    │ • Role-based Access              │ │
+│  │ • Bilingual AI     │    │ • Analytics & Reports            │ │
+│  │ • Voice Calls      │    │ • Patient Management             │ │
+│  └─────────┬──────────┘    └───────────────┬──────────────────┘ │
+└────────────┼──────────────────────────────┼─────────────────────┘
+             │         REST API + WebSocket │
+             ▼                              ▼
+┌──────────────────────────────────────────────────────────────────┐
+│                      API LAYER (FastAPI)                          │
+├──────────────────────────────────────────────────────────────────┤
+│  ┌──────────┬──────────┬──────────┬──────────┬────────────────┐ │
+│  │ AI Saathi│ Medical  │ Doctors  │ Emergency│   Simulations  │ │
+│  │ • Chat   │ History  │ • Search │ • SOS    │   • CPR        │ │
+│  │ • Voice  │ • Records│ • Book   │ • Alerts │   • First Aid  │ │
+│  │ • Scan   │ • AI     │ • Video  │ • Weather│   • Voice TTS  │ │
+│  └──────────┴──────────┴──────────┴──────────┴────────────────┘ │
+└─────────────────────────────┬────────────────────────────────────┘
+                              │
+                              ▼
+┌──────────────────────────────────────────────────────────────────┐
+│                      DATA & AI LAYER                              │
+├──────────────────────────────────────────────────────────────────┤
+│  ┌─────────────┐  ┌─────────────────┐  ┌──────────────────────┐ │
+│  │ PostgreSQL  │  │ Google Gemini   │  │   External APIs      │ │
+│  │ • Users     │  │ • 2.0 Flash     │  │   • FDA OpenFDA      │ │
+│  │ • Records   │  │ • Live Voice    │  │   • OpenWeather      │ │
+│  │ • History   │  │ • Image Analysis│  │   • Jitsi Meet       │ │
+│  └─────────────┘  └─────────────────┘  └──────────────────────┘ │
+└──────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 📁 Project Structure
+
+```
+Swasthya/
+├── backend/                 # FastAPI Backend (24 API modules)
+│   ├── app/routes/
+│   │   ├── ai_sathi.py      # AI chat, symptoms, analysis
+│   │   ├── live_ai_call.py  # WebSocket voice streaming
+│   │   ├── medical_history.py # Full health records
+│   │   ├── simulations.py   # Training simulations
+│   │   └── ...
+│   └── requirements.txt
+│
+├── mobile/                  # Flutter App (24 screen modules)
+│   ├── lib/screens/
+│   │   ├── ai_sathi/        # AI chat, scan, history
+│   │   ├── home/            # Dashboard (1800+ lines)
+│   │   ├── medical_history/ # Records (1865 lines)
+│   │   ├── emergency/       # SOS, contacts
+│   │   ├── simulation/      # CPR, first aid
+│   │   └── ...
+│   ├── lib/services/
+│   │   ├── offline_cache_service.dart
+│   │   ├── live_ai_call_service.dart
+│   │   └── medicine_alarm_service.dart
+│   └── pubspec.yaml
+│
+├── web/                     # Next.js Dashboard
+│   └── src/app/dashboard/
+│
+└── design/                  # 21 Figma UI Mockups
+```
+
+---
+
+## 🚀 Setup & Installation
+
+### Backend
+```bash
+cd backend
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+cp .env.example .env  # Add API keys
+uvicorn app.main:app --reload --port 8000
+```
+
+### Mobile
+```bash
+cd mobile
+flutter pub get
+flutter run                    # Development
+flutter build apk --release    # Production APK
+```
+
+### Web
+```bash
+cd web
+npm install
+npm run dev
+```
+
+---
+
+## 🏆 Innovation Highlights
+
+| Innovation | Description |
+|------------|-------------|
+| **🌐 Bilingual AI** | First healthcare AI in English + Nepali |
+| **📴 Offline-First** | Critical health data works without internet |
+| **🔬 AI Report Analyzer** | MRI, CT, Lab reports explained in any language |
+| **🎙️ Live Voice AI** | Real-time voice calls with AI specialists |
+| **🎮 Interactive Training** | Gamified CPR/First-Aid simulations |
+| **🌡️ Climate-Health** | Weather-based health alerts for rural areas |
+| **👨‍⚕️ Rural Focus** | Designed for areas with limited healthcare access |
+
+---
+
+## 👥 Team
+
+**Team Swasthya** - LOCUS Hackathon 2026
+
+---
+
+<div align="center">
+
+**Built with ❤️ for Nepal's Healthcare**
+
+*स्वास्थ्य - Empowering Health Through Technology*
+
+</div>

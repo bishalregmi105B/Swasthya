@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Doctor Profile/Booking</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                        "card-dark": "#1e293b",
+                        "card-light": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding for horizontal scroll areas */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden pb-24">
+<!-- Sticky Header -->
+<div class="sticky top-0 z-50 flex items-center justify-between bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm p-4 border-b border-slate-200 dark:border-slate-800">
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-white" style="font-size: 24px;">arrow_back</span>
+</button>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight">Doctor Profile</h2>
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-white" style="font-size: 24px;">favorite</span>
+</button>
+</div>
+<!-- Profile Section -->
+<div class="flex flex-col items-center p-6 gap-4 animate-fade-in">
+<div class="relative">
+<div class="bg-center bg-no-repeat bg-cover rounded-full h-32 w-32 ring-4 ring-white dark:ring-slate-800 shadow-xl" data-alt="Portrait of Dr. Sarah Jenkins" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCTXQi9gwAWCtFqSV1Gw04LBdgnbWQPW2i_lYq49Yxon6GCVQqjT3aWkZkk7VT8lq86_qUTa7v5KhnAXpUk4oDXyHQZ_IhRIjFI6QOatkR7Y4FaxNXOeRBd8Cg84K7lpUyr3x04DeDA_a3b93646sjTAsgR0tOq6zEya5GnBLFz1HmLRlHP-cJwWz6yNDvjrIuF0DGa1t5A5Epd438ArRbWORpSnYfZRf1bWHsQyp5Dfspj8AgUujH-DywYdIMk0LYDDE9bieQz14lm");'>
+</div>
+<div class="absolute bottom-0 right-1 bg-blue-500 rounded-full p-1.5 border-2 border-white dark:border-slate-900 flex items-center justify-center">
+<span class="material-symbols-outlined text-white" style="font-size: 16px; font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center text-center gap-1">
+<h1 class="text-2xl font-bold leading-tight tracking-tight">Dr. Sarah Jenkins, MD</h1>
+<p class="text-primary font-medium text-sm">Senior Neurologist</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-semibold border border-blue-500/20">AI-Verified Expert</span>
+</div>
+</div>
+</div>
+<!-- Stats Row -->
+<div class="px-6 pb-6">
+<div class="flex justify-between divide-x divide-slate-200 dark:divide-slate-700 bg-card-light dark:bg-card-dark rounded-xl p-4 shadow-sm">
+<div class="flex flex-col items-center px-4 flex-1">
+<span class="text-lg font-bold">12 Yrs</span>
+<span class="text-xs text-slate-500 dark:text-slate-400">Experience</span>
+</div>
+<div class="flex flex-col items-center px-4 flex-1">
+<span class="text-lg font-bold">5k+</span>
+<span class="text-xs text-slate-500 dark:text-slate-400">Patients</span>
+</div>
+<div class="flex flex-col items-center px-4 flex-1">
+<div class="flex items-center gap-1">
+<span class="text-lg font-bold">4.9</span>
+<span class="material-symbols-outlined text-yellow-500" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-xs text-slate-500 dark:text-slate-400">Reviews</span>
+</div>
+</div>
+</div>
+<!-- AI Insight Card -->
+<div class="px-4 pb-6">
+<div class="relative overflow-hidden rounded-xl p-5 shadow-lg bg-gradient-to-br from-indigo-900 to-slate-900">
+<!-- Decorative background effect -->
+<div class="absolute top-0 right-0 -mr-8 -mt-8 h-32 w-32 rounded-full bg-primary/30 blur-3xl"></div>
+<div class="relative z-10 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-400" style="font-size: 20px;">auto_awesome</span>
+<span class="text-blue-200 text-xs font-bold uppercase tracking-wider">AI Insight</span>
+</div>
+</div>
+<div>
+<h3 class="text-white text-lg font-bold mb-1">Performance Summary</h3>
+<p class="text-blue-100/80 text-sm leading-relaxed">
+                            Analysis of 320 reviews indicates high proficiency in migraine treatments. Patients consistently praise her empathy and quick diagnosis turnaround.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Consultation Types -->
+<div class="px-4 pb-6">
+<h3 class="text-slate-900 dark:text-white text-base font-bold mb-3 px-1">Consultation Type</h3>
+<div class="grid grid-cols-2 gap-3">
+<!-- Video Call Option (Selected) -->
+<button class="relative group flex flex-col items-start gap-3 p-4 rounded-xl border-2 border-primary bg-primary/5 dark:bg-primary/10 transition-all">
+<div class="absolute top-3 right-3 h-5 w-5 rounded-full border-2 border-primary flex items-center justify-center bg-primary">
+<span class="material-symbols-outlined text-white" style="font-size: 14px;">check</span>
+</div>
+<div class="rounded-full bg-primary/20 p-2 text-primary">
+<span class="material-symbols-outlined" style="font-size: 24px;">videocam</span>
+</div>
+<div class="text-left">
+<p class="font-bold text-slate-900 dark:text-white">Video Call</p>
+<p class="text-primary font-bold text-lg">$45</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">30 mins session</p>
+</div>
+</button>
+<!-- Chat Option -->
+<button class="relative group flex flex-col items-start gap-3 p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-card-light dark:bg-card-dark hover:border-slate-300 dark:hover:border-slate-600 transition-all">
+<div class="absolute top-3 right-3 h-5 w-5 rounded-full border-2 border-slate-300 dark:border-slate-600 flex items-center justify-center"></div>
+<div class="rounded-full bg-slate-100 dark:bg-slate-800 p-2 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined" style="font-size: 24px;">chat_bubble</span>
+</div>
+<div class="text-left">
+<p class="font-bold text-slate-900 dark:text-white">Chat</p>
+<p class="text-slate-900 dark:text-white font-bold text-lg">$20</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">24hrs active</p>
+</div>
+</button>
+</div>
+</div>
+<!-- Availability Section -->
+<div class="pb-6">
+<div class="flex items-center justify-between px-4 mb-3">
+<h3 class="text-slate-900 dark:text-white text-base font-bold">Availability</h3>
+<span class="text-xs font-medium text-primary">Next: Today, 4:00 PM</span>
+</div>
+<!-- Date Strip -->
+<div class="flex overflow-x-auto no-scrollbar gap-3 px-4 pb-4">
+<div class="flex min-w-[64px] flex-col items-center justify-center gap-1 rounded-xl bg-primary p-3 text-white shadow-lg shadow-primary/25">
+<span class="text-xs font-medium opacity-80">Mon</span>
+<span class="text-lg font-bold">12</span>
+</div>
+<div class="flex min-w-[64px] flex-col items-center justify-center gap-1 rounded-xl border border-slate-200 dark:border-slate-700 bg-card-light dark:bg-card-dark p-3 text-slate-500 dark:text-slate-400">
+<span class="text-xs font-medium">Tue</span>
+<span class="text-lg font-bold text-slate-900 dark:text-white">13</span>
+</div>
+<div class="flex min-w-[64px] flex-col items-center justify-center gap-1 rounded-xl border border-slate-200 dark:border-slate-700 bg-card-light dark:bg-card-dark p-3 text-slate-500 dark:text-slate-400">
+<span class="text-xs font-medium">Wed</span>
+<span class="text-lg font-bold text-slate-900 dark:text-white">14</span>
+</div>
+<div class="flex min-w-[64px] flex-col items-center justify-center gap-1 rounded-xl border border-slate-200 dark:border-slate-700 bg-card-light dark:bg-card-dark p-3 text-slate-500 dark:text-slate-400">
+<span class="text-xs font-medium">Thu</span>
+<span class="text-lg font-bold text-slate-900 dark:text-white">15</span>
+</div>
+<div class="flex min-w-[64px] flex-col items-center justify-center gap-1 rounded-xl border border-slate-200 dark:border-slate-700 bg-card-light dark:bg-card-dark p-3 text-slate-500 dark:text-slate-400">
+<span class="text-xs font-medium">Fri</span>
+<span class="text-lg font-bold text-slate-900 dark:text-white">16</span>
+</div>
+</div>
+<!-- Time Slots -->
+<div class="px-4 grid grid-cols-4 gap-2">
+<button class="rounded-lg border border-slate-200 dark:border-slate-700 py-2 text-sm font-medium text-slate-400 line-through cursor-not-allowed bg-slate-50 dark:bg-slate-800/50">09:00</button>
+<button class="rounded-lg border border-slate-200 dark:border-slate-700 py-2 text-sm font-medium text-slate-400 line-through cursor-not-allowed bg-slate-50 dark:bg-slate-800/50">10:30</button>
+<button class="rounded-lg border border-slate-200 dark:border-slate-700 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:border-primary hover:text-primary transition-colors">14:00</button>
+<button class="rounded-lg bg-primary py-2 text-sm font-medium text-white shadow-md shadow-primary/20">16:00</button>
+<button class="rounded-lg border border-slate-200 dark:border-slate-700 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:border-primary hover:text-primary transition-colors">16:30</button>
+<button class="rounded-lg border border-slate-200 dark:border-slate-700 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:border-primary hover:text-primary transition-colors">17:00</button>
+</div>
+</div>
+<!-- About Section -->
+<div class="px-4 pb-6">
+<h3 class="text-slate-900 dark:text-white text-base font-bold mb-2">About Doctor</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                Dr. Jenkins is a specialized Neurologist with over a decade of experience in treating migraine and complex neurological disorders. She uses advanced AI-assisted diagnostics to provide precision care. She is a member of the American Academy of Neurology and has published multiple papers on headache management. <span class="text-primary font-medium">Read more</span>
+</p>
+</div>
+<!-- Rating Summary -->
+<div class="px-4 pb-6">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-slate-900 dark:text-white text-base font-bold">Reviews</h3>
+<span class="text-primary text-sm font-medium">See all</span>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-xl p-4 shadow-sm border border-slate-200 dark:border-slate-700">
+<div class="flex gap-6 items-center">
+<div class="flex flex-col gap-1 items-center justify-center min-w-[80px]">
+<p class="text-slate-900 dark:text-white text-4xl font-black leading-tight">4.9</p>
+<div class="flex text-yellow-500">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-normal">320 reviews</p>
+</div>
+<div class="flex-1 space-y-2">
+<!-- 5 Star -->
+<div class="flex items-center gap-2">
+<span class="text-slate-500 text-xs w-2">5</span>
+<div class="flex h-1.5 flex-1 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-700">
+<div class="rounded-full bg-primary" style="width: 85%;"></div>
+</div>
+</div>
+<!-- 4 Star -->
+<div class="flex items-center gap-2">
+<span class="text-slate-500 text-xs w-2">4</span>
+<div class="flex h-1.5 flex-1 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-700">
+<div class="rounded-full bg-primary" style="width: 10%;"></div>
+</div>
+</div>
+<!-- 3 Star -->
+<div class="flex items-center gap-2">
+<span class="text-slate-500 text-xs w-2">3</span>
+<div class="flex h-1.5 flex-1 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-700">
+<div class="rounded-full bg-primary" style="width: 2%;"></div>
+</div>
+</div>
+<!-- 2 Star -->
+<div class="flex items-center gap-2">
+<span class="text-slate-500 text-xs w-2">2</span>
+<div class="flex h-1.5 flex-1 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-700">
+<div class="rounded-full bg-slate-300 dark:bg-slate-600" style="width: 2%;"></div>
+</div>
+</div>
+<!-- 1 Star -->
+<div class="flex items-center gap-2">
+<span class="text-slate-500 text-xs w-2">1</span>
+<div class="flex h-1.5 flex-1 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-700">
+<div class="rounded-full bg-slate-300 dark:bg-slate-600" style="width: 1%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Action Button Area -->
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 z-50 safe-area-bottom pb-8">
+<button class="w-full flex items-center justify-center gap-2 bg-primary hover:bg-blue-600 text-white font-bold text-lg h-14 rounded-xl shadow-lg shadow-primary/25 transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined">calendar_month</span>
+            Book Appointment
+        </button>
+</div>
+</body></html>

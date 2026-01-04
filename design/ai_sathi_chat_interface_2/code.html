@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Doctor Specializations</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #282f39;
+            border-radius: 3px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                        "surface-dark": "#1c2027",
+                        "surface-light": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased h-screen flex flex-col overflow-hidden">
+<header class="flex items-center justify-between bg-surface-light dark:bg-background-dark p-4 border-b border-gray-200 dark:border-gray-800 z-10 shrink-0">
+<div class="flex items-center gap-3">
+<button class="flex items-center justify-center h-10 w-10 -ml-2 rounded-full text-gray-500 hover:bg-gray-100 dark:hover:bg-surface-dark transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<div>
+<h2 class="text-lg font-bold leading-tight tracking-tight dark:text-white">New Consultation</h2>
+<p class="text-xs text-gray-500 dark:text-gray-400 font-medium">Select a Specialist</p>
+</div>
+</div>
+<div class="relative">
+<div class="bg-center bg-no-repeat bg-cover rounded-full h-9 w-9 border border-gray-200 dark:border-gray-700" data-alt="User profile avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDQ2XNiH2hKgV6SGuVKfMc05jesq2WfTURURxg750hOaW5nJk_jm1Zoc33CLevvSHa2URYOxhgj7YpZBm6n_yFmKs53w-WhP8GZQDP0z08_Ox3pTHUmyh_aXkg0e51GOgcu0ISNdAJD1GXhAZac3YZ8IUX6BY4VGxpcp6jofLmINldIUsqinza5SEiwhY0Ibh2bZKFMjLyF25NEZjmvZbXJGWF2XR09eXEtjpAJXImkphxH4LDZTbimi797ZLlQy238N8tZdoDPZzV1");'>
+</div>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto p-4 md:p-6 pb-20">
+<div class="mb-6">
+<h1 class="text-2xl font-bold mb-2">Who would you like to consult?</h1>
+<p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+            Choose an AI specialist tailored to your specific health needs for a focused and accurate consultation.
+        </p>
+</div>
+<div class="relative mb-6">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 material-symbols-outlined">search</span>
+<input class="w-full bg-white dark:bg-surface-dark border-gray-200 dark:border-gray-700 rounded-xl pl-10 pr-4 py-3 text-sm focus:ring-primary focus:border-primary placeholder-gray-400 dark:placeholder-gray-500 shadow-sm transition-all" placeholder="Search by symptoms or specialization..." type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<button class="group relative flex items-start gap-4 p-4 rounded-2xl bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800 hover:border-primary/50 dark:hover:border-primary/50 hover:shadow-md transition-all text-left w-full">
+<div class="shrink-0 h-14 w-14 rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">stethoscope</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-bold text-base text-gray-900 dark:text-white mb-1">General Physician AI</h3>
+<p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">For common illnesses like cold, flu, fever, and general health queries.</p>
+</div>
+<div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-gray-300 dark:text-gray-600">arrow_forward_ios</span>
+</div>
+</button>
+<button class="group relative flex items-start gap-4 p-4 rounded-2xl bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800 hover:border-purple-400/50 dark:hover:border-purple-400/50 hover:shadow-md transition-all text-left w-full">
+<div class="shrink-0 h-14 w-14 rounded-xl bg-purple-50 dark:bg-purple-900/20 flex items-center justify-center text-purple-600 dark:text-purple-400 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">psychology</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-bold text-base text-gray-900 dark:text-white mb-1">Mental Health AI</h3>
+<p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Support for anxiety, stress, depression, and emotional well-being.</p>
+</div>
+<div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-gray-300 dark:text-gray-600">arrow_forward_ios</span>
+</div>
+</button>
+<button class="group relative flex items-start gap-4 p-4 rounded-2xl bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800 hover:border-pink-400/50 dark:hover:border-pink-400/50 hover:shadow-md transition-all text-left w-full">
+<div class="shrink-0 h-14 w-14 rounded-xl bg-pink-50 dark:bg-pink-900/20 flex items-center justify-center text-pink-600 dark:text-pink-400 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">dermatology</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-bold text-base text-gray-900 dark:text-white mb-1">Dermatologist AI</h3>
+<p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Analysis for rashes, acne, skin infections, and hair concerns.</p>
+</div>
+<div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-gray-300 dark:text-gray-600">arrow_forward_ios</span>
+</div>
+</button>
+<button class="group relative flex items-start gap-4 p-4 rounded-2xl bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800 hover:border-yellow-400/50 dark:hover:border-yellow-400/50 hover:shadow-md transition-all text-left w-full">
+<div class="shrink-0 h-14 w-14 rounded-xl bg-yellow-50 dark:bg-yellow-900/20 flex items-center justify-center text-yellow-600 dark:text-yellow-400 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">child_care</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-bold text-base text-gray-900 dark:text-white mb-1">Pediatrician AI</h3>
+<p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Health guidance for infants, children, and adolescents.</p>
+</div>
+<div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-gray-300 dark:text-gray-600">arrow_forward_ios</span>
+</div>
+</button>
+<button class="group relative flex items-start gap-4 p-4 rounded-2xl bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800 hover:border-green-400/50 dark:hover:border-green-400/50 hover:shadow-md transition-all text-left w-full">
+<div class="shrink-0 h-14 w-14 rounded-xl bg-green-50 dark:bg-green-900/20 flex items-center justify-center text-green-600 dark:text-green-400 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">nutrition</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-bold text-base text-gray-900 dark:text-white mb-1">Nutrition &amp; Diet AI</h3>
+<p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Personalized diet plans, weight management, and nutritional advice.</p>
+</div>
+<div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-gray-300 dark:text-gray-600">arrow_forward_ios</span>
+</div>
+</button>
+<button class="group relative flex items-start gap-4 p-4 rounded-2xl bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800 hover:border-red-400/50 dark:hover:border-red-400/50 hover:shadow-md transition-all text-left w-full">
+<div class="shrink-0 h-14 w-14 rounded-xl bg-red-50 dark:bg-red-900/20 flex items-center justify-center text-red-600 dark:text-red-400 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">cardiology</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-bold text-base text-gray-900 dark:text-white mb-1">Heart Health AI</h3>
+<p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Guidance on blood pressure, heart rate, and cardiovascular wellness.</p>
+</div>
+<div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-gray-300 dark:text-gray-600">arrow_forward_ios</span>
+</div>
+</button>
+</div>
+<div class="mt-8">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-lg font-bold text-gray-900 dark:text-white">Recent Activity</h2>
+<button class="text-xs font-semibold text-primary hover:text-blue-600">View All</button>
+</div>
+<div class="bg-white dark:bg-surface-dark rounded-xl p-4 border border-gray-100 dark:border-gray-800 flex items-center gap-4 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors cursor-pointer">
+<div class="h-10 w-10 rounded-full bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center text-pink-600 dark:text-pink-400">
+<span class="material-symbols-outlined text-xl">dermatology</span>
+</div>
+<div class="flex-1">
+<h4 class="text-sm font-semibold dark:text-white">Skin Analysis</h4>
+<p class="text-xs text-gray-500">Yesterday • Dr. Sharma (Ref)</p>
+</div>
+<span class="material-symbols-outlined text-gray-400 text-sm">arrow_forward_ios</span>
+</div>
+</div>
+</main>
+<nav class="bg-surface-light dark:bg-background-dark border-t border-gray-200 dark:border-gray-800 flex justify-around items-center h-16 shrink-0 safe-area-bottom">
+<button class="flex flex-col items-center justify-center w-full h-full text-primary">
+<span class="material-symbols-outlined text-2xl">home_health</span>
+<span class="text-[10px] font-medium mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center w-full h-full text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
+<span class="material-symbols-outlined text-2xl">chat_bubble</span>
+<span class="text-[10px] font-medium mt-1">Chats</span>
+</button>
+<button class="flex flex-col items-center justify-center w-full h-full text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
+<span class="material-symbols-outlined text-2xl">calendar_month</span>
+<span class="text-[10px] font-medium mt-1">Bookings</span>
+</button>
+<button class="flex flex-col items-center justify-center w-full h-full text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
+<span class="material-symbols-outlined text-2xl">person</span>
+<span class="text-[10px] font-medium mt-1">Profile</span>
+</button>
+</nav>
+
+</body></html>

@@ -1,0 +1,45 @@
+# Swasthya Backend Dependencies
+# Requires Python 3.10+
+
+# Core Flask
+Flask==3.0.0
+Flask-Cors==4.0.0
+Flask-JWT-Extended==4.6.0
+Flask-Migrate==4.0.5
+Flask-SQLAlchemy==3.1.1
+Werkzeug==3.0.1
+
+# Database
+SQLAlchemy==2.0.45
+PyMySQL==1.1.0
+alembic==1.17.2
+
+# AI / LLM
+g4f>=6.0.0
+
+# HTTP / Async
+aiohttp>=3.9.0
+requests==2.31.0
+
+# TTS
+edge-tts>=6.1.0
+
+# Security
+cryptography==41.0.7
+pycryptodome>=3.19.0
+PyJWT>=2.8.0
+
+# Image Processing
+pillow>=10.0.0
+
+# Server
+gunicorn==21.2.0
+
+# Environment
+python-dotenv==1.0.0
+
+# Utilities
+brotli>=1.1.0
+certifi>=2023.0.0
+nest-asyncio>=1.5.0
+tabulate>=0.9.0

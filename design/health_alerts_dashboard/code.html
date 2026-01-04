@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Health Alerts Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white transition-colors duration-200">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto shadow-2xl bg-background-light dark:bg-background-dark border-x dark:border-slate-800 border-slate-200">
+<!-- Header -->
+<header class="sticky top-0 z-50 flex items-center justify-between p-4 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="relative">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 border-2 border-primary" data-alt="Portrait of a user" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAMZNSv9M0oeZLmJbJFCuShGi32WWito4tRMj-TWAiNHOhy-jtO6EBKGOwTK2oMVCiAqkKaFNiDRc4Uhsuhs_4tE5SjkhuiJ6nAoD4DY5hrJxiX1FblFWQL1S8VRvTAA5nlhrNGGWLWS2ezyaCexUtOlnzN-onwgBmvTNhXvUbH99FUnTttk95PB8hfy9W3tQYHVZuyOvuHKQ9_3pwvCCQ5i2lxmvbJgQbSeXIjiGZSjmKfAfYZVcfGgeLjqzK_rFFe0WY-cTAtlI_d");'></div>
+<div class="absolute bottom-0 right-0 size-3 bg-green-500 rounded-full border-2 border-background-light dark:border-background-dark"></div>
+</div>
+<div>
+<div class="flex items-center gap-1 text-xs text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wide">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span>Current Location</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-sm font-bold leading-tight">San Francisco, CA</h2>
+</div>
+</div>
+<button class="flex items-center justify-center size-10 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-red-500 rounded-full animate-pulse"></span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col gap-6 p-4 pb-24">
+<!-- AI Insight Banner -->
+<section class="@container">
+<div class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-lg bg-white dark:bg-[#1c2027] border border-slate-200 dark:border-slate-800">
+<div class="relative w-full h-40 bg-center bg-no-repeat bg-cover" data-alt="Abstract medical data visualization background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDdgFNcPVy6HdGy1QNuNxTQjVow-qoj7j16ra1MskCgcbnNqRp7WLG7ZmqNtsr3fu09Ti0zc56_Lw2GtxcDLKxJGXrkLc95QkGQjzQr9C8aBfTPnVOdZr6jhCBc-OcFqIKKAR9naqrwQobWWYQh3lurts0zLU667WTEZNxtbMdu44R8Q176-NtM4Zx6gmycsdL2w14KZMTZ2N32SVN7oW76LBp6mO07LTYE0i4XCnJOqq-i6C2WjzhXzu1Wi-d_xYEoz_td6_qaf3C-");'>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-500/20 text-orange-400 backdrop-blur-sm border border-orange-500/30 text-xs font-bold uppercase tracking-wider">
+<span class="size-2 rounded-full bg-orange-500"></span>
+                                Moderate Risk
+                            </span>
+</div>
+</div>
+<div class="flex flex-col gap-3 p-4">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-slate-500 dark:text-[#9da8b9] text-xs font-semibold uppercase tracking-wider mb-1">Daily AI Summary</p>
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight">Respiratory Alert Level Rising</h3>
+</div>
+<span class="material-symbols-outlined text-primary text-3xl">medical_services</span>
+</div>
+<p class="text-slate-600 dark:text-[#9da8b9] text-sm leading-relaxed">
+                            Based on local pharmacy sales of antitussives and urgent care data, respiratory infections are up 12% this week. Masking in crowded transit is recommended.
+                        </p>
+<div class="pt-2">
+<button class="w-full flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-primary hover:bg-blue-600 text-white text-sm font-medium transition-colors shadow-md shadow-blue-500/20">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+<span>View Full AI Report</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Critical Alerts Carousel -->
+<section>
+<div class="flex items-center justify-between mb-3 px-1">
+<h2 class="text-slate-900 dark:text-white text-lg font-bold">Critical Alerts</h2>
+<button class="text-primary text-sm font-medium hover:underline">See All</button>
+</div>
+<div class="-mx-4 px-4 overflow-x-auto pb-4 flex gap-4 snap-x snap-mandatory scrollbar-hide" style="scrollbar-width: none; -ms-overflow-style: none;">
+<!-- Card 1 -->
+<div class="snap-center shrink-0 w-[280px] rounded-xl bg-white dark:bg-[#1c2027] border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
+<div class="h-32 bg-cover bg-center relative" data-alt="Smoggy city skyline indicating poor air quality" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDQLlXDbtVe9o-5MMZ0rP_tXYhE_lnKHjrAQmr79N6OAMgXuwM1vs2bCf7FiJMF2CTky6PQ7EFFQ6yagnl41do8FzEe-gUIrY6ma_WXYdftX3mTlA-UXz4Dse0vGaoTJqhqtCANKExUAsuvEiP2y5zejLmP8RmT69Rk3f-ZdciBjY-kqFRpE-nKbmk93VGBSpCVbvpk0d_TUYsIw5frU5W9jKNWyV-qhlsO5rSqoweBnwki3uy_izNFtEWHZ_rsJkOsmOxQMH8D4xUO");'>
+<div class="absolute top-3 right-3 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded shadow-sm uppercase">Hazardous</div>
+</div>
+<div class="p-4 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="text-slate-900 dark:text-white font-bold text-base mb-1">Air Quality Alert</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm">AQI is 156. Avoid outdoor exercise until evening.</p>
+</div>
+<div class="mt-4 flex items-center justify-between text-xs font-medium text-slate-400">
+<span>Updated 10m ago</span>
+<span class="flex items-center gap-1 text-primary">Details <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="snap-center shrink-0 w-[280px] rounded-xl bg-white dark:bg-[#1c2027] border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
+<div class="h-32 bg-cover bg-center relative" data-alt="Sun glaring intensely in the sky" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB72peNYySSTcFI7vH6FLkm44SVyyTQvCl8ei4tUkmtTmHNQfeAl88dgLGimA0l8S5Nnj5qBZGn6MDMpOyliQC2UY_PYy_W-xxs_6hBnmknu3FvQzvpEoCRsb3Cc0Js9pyvxEAwuTDP699lZNF7ESQXqSNa1U5V4DB1G60UypFtU2WhPUsLLAoX9GBrPNrTQf_yuwEB86OGAUlSpF2KkJpabvfzx45zSCqSxjXfAAYMipDM8GlX1n0UXgKYNAolMQvTktqkfhhkh2-3");'>
+<div class="absolute top-3 right-3 bg-orange-500 text-white text-[10px] font-bold px-2 py-1 rounded shadow-sm uppercase">Warning</div>
+</div>
+<div class="p-4 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="text-slate-900 dark:text-white font-bold text-base mb-1">Heat Wave Advisory</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Temps reaching 98°F. Stay hydrated.</p>
+</div>
+<div class="mt-4 flex items-center justify-between text-xs font-medium text-slate-400">
+<span>Valid until 8 PM</span>
+<span class="flex items-center gap-1 text-primary">Details <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="snap-center shrink-0 w-[280px] rounded-xl bg-white dark:bg-[#1c2027] border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
+<div class="h-32 bg-cover bg-center relative" data-alt="Close up of flowers releasing pollen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAKlB_40zKxnYZSLfrhW_O3QyiAKZoCRzEdQTjPvdGwd3ntFOlSm5Amkw-TVyIgn7knJtkJSx-hvl2GlGiwJQH0aaXgk8zsndyIWI_-QfFZ5ZIijM5ShzHTW6kNqqXhtRNJhcJiB33-2Z8Q9o_8LIbb_R3nz0XDDjvD8RGh3hAdaS3KTCQ5nlSyF1LlkJxpnHyhyuoKztymWx8IYRgp4aUhAR0WJt5rwgcrGUhWtfCYQPBIg2o54Dl5DYdz7KlEsDEyYnFfKijJVXzr");'>
+<div class="absolute top-3 right-3 bg-yellow-500 text-black text-[10px] font-bold px-2 py-1 rounded shadow-sm uppercase">Advisory</div>
+</div>
+<div class="p-4 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="text-slate-900 dark:text-white font-bold text-base mb-1">High Pollen Count</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Tree pollen levels are very high today.</p>
+</div>
+<div class="mt-4 flex items-center justify-between text-xs font-medium text-slate-400">
+<span>Allergy index: 9/10</span>
+<span class="flex items-center gap-1 text-primary">Details <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trending Near You -->
+<section>
+<div class="flex items-center justify-between mb-3 px-1">
+<h2 class="text-slate-900 dark:text-white text-lg font-bold">Trending Near You</h2>
+</div>
+<div class="flex flex-col gap-3">
+<!-- List Item 1 -->
+<div class="flex items-center p-3 rounded-xl bg-white dark:bg-[#1c2027] border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-center size-12 rounded-lg bg-red-50 dark:bg-red-500/10 text-red-500 mr-4 shrink-0">
+<span class="material-symbols-outlined">coronavirus</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="text-slate-900 dark:text-white font-semibold text-sm truncate">Seasonal Influenza A</h4>
+<p class="text-slate-500 dark:text-slate-400 text-xs truncate">High contagion risk in schools</p>
+</div>
+<div class="text-right shrink-0">
+<div class="flex items-center justify-end text-red-500 text-sm font-bold">
+<span class="material-symbols-outlined text-sm mr-0.5">trending_up</span>
+                                15%
+                            </div>
+<p class="text-slate-400 text-[10px]">this week</p>
+</div>
+</div>
+<!-- List Item 2 -->
+<div class="flex items-center p-3 rounded-xl bg-white dark:bg-[#1c2027] border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-center size-12 rounded-lg bg-yellow-50 dark:bg-yellow-500/10 text-yellow-500 mr-4 shrink-0">
+<span class="material-symbols-outlined">sick</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="text-slate-900 dark:text-white font-semibold text-sm truncate">Norovirus</h4>
+<p class="text-slate-500 dark:text-slate-400 text-xs truncate">Localized outbreaks reported</p>
+</div>
+<div class="text-right shrink-0">
+<div class="flex items-center justify-end text-yellow-500 text-sm font-bold">
+<span class="material-symbols-outlined text-sm mr-0.5">trending_up</span>
+                                5%
+                            </div>
+<p class="text-slate-400 text-[10px]">this week</p>
+</div>
+</div>
+<!-- List Item 3 -->
+<div class="flex items-center p-3 rounded-xl bg-white dark:bg-[#1c2027] border border-slate-200 dark:border-slate-800 shadow-sm opacity-70">
+<div class="flex items-center justify-center size-12 rounded-lg bg-green-50 dark:bg-green-500/10 text-green-500 mr-4 shrink-0">
+<span class="material-symbols-outlined">masks</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="text-slate-900 dark:text-white font-semibold text-sm truncate">Common Cold</h4>
+<p class="text-slate-500 dark:text-slate-400 text-xs truncate">Cases dropping significantly</p>
+</div>
+<div class="text-right shrink-0">
+<div class="flex items-center justify-end text-green-500 text-sm font-bold">
+<span class="material-symbols-outlined text-sm mr-0.5">trending_down</span>
+                                8%
+                            </div>
+<p class="text-slate-400 text-[10px]">this week</p>
+</div>
+</div>
+</div>
+</section>
+<!-- AI Analysis Widget -->
+<section class="mt-2">
+<div class="rounded-xl bg-white dark:bg-[#1c2027] border border-slate-200 dark:border-slate-800 shadow-sm p-4">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-slate-900 dark:text-white font-bold text-base">Symptom Distribution</h3>
+<button class="size-8 flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400">
+<span class="material-symbols-outlined text-sm">more_horiz</span>
+</button>
+</div>
+<div class="flex items-center gap-6">
+<!-- Simple Donut Chart Representation using CSS Conic Gradient -->
+<div class="relative size-32 shrink-0 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center" style="background: conic-gradient(#136dec 0% 45%, #ef4444 45% 70%, #eab308 70% 85%, #334155 85% 100%);">
+<div class="size-24 bg-white dark:bg-[#1c2027] rounded-full flex flex-col items-center justify-center z-10">
+<span class="text-2xl font-bold text-slate-900 dark:text-white">4.2k</span>
+<span class="text-[10px] text-slate-500 uppercase font-semibold">Reports</span>
+</div>
+</div>
+<!-- Legend -->
+<div class="flex flex-col gap-2 w-full">
+<div class="flex items-center justify-between text-xs">
+<div class="flex items-center gap-2">
+<span class="size-2.5 rounded-full bg-primary"></span>
+<span class="text-slate-600 dark:text-slate-300">Cough/Fever</span>
+</div>
+<span class="font-bold text-slate-900 dark:text-white">45%</span>
+</div>
+<div class="flex items-center justify-between text-xs">
+<div class="flex items-center gap-2">
+<span class="size-2.5 rounded-full bg-red-500"></span>
+<span class="text-slate-600 dark:text-slate-300">Fatigue</span>
+</div>
+<span class="font-bold text-slate-900 dark:text-white">25%</span>
+</div>
+<div class="flex items-center justify-between text-xs">
+<div class="flex items-center gap-2">
+<span class="size-2.5 rounded-full bg-yellow-500"></span>
+<span class="text-slate-600 dark:text-slate-300">Nausea</span>
+</div>
+<span class="font-bold text-slate-900 dark:text-white">15%</span>
+</div>
+<div class="flex items-center justify-between text-xs">
+<div class="flex items-center gap-2">
+<span class="size-2.5 rounded-full bg-slate-700"></span>
+<span class="text-slate-600 dark:text-slate-300">Other</span>
+</div>
+<span class="font-bold text-slate-900 dark:text-white">15%</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800 pb-safe">
+<div class="max-w-md mx-auto flex justify-around items-center h-16 px-2">
+<button class="flex flex-col items-center justify-center w-full h-full gap-1 text-primary">
+<span class="material-symbols-outlined filled">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center w-full h-full gap-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+<span class="material-symbols-outlined">map</span>
+<span class="text-[10px] font-medium">Map</span>
+</button>
+<!-- Center FAB placeholder visual -->
+<div class="relative -top-6">
+<button class="size-14 rounded-full bg-primary shadow-lg shadow-blue-500/40 text-white flex items-center justify-center transform transition-transform active:scale-95 border-4 border-background-light dark:border-background-dark">
+<span class="material-symbols-outlined text-2xl">add_alert</span>
+</button>
+</div>
+<button class="flex flex-col items-center justify-center w-full h-full gap-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+<span class="material-symbols-outlined">bar_chart</span>
+<span class="text-[10px] font-medium">Stats</span>
+</button>
+<button class="flex flex-col items-center justify-center w-full h-full gap-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</div>
+</nav>
+</div>
+</body></html>

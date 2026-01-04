@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Prevention Hub</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#136dec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101822",
+              "surface-dark": "#1A222C",
+              "surface-light": "#FFFFFF",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        /* Custom scrollbar hiding for horizontal scroll areas */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white transition-colors duration-200">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden pb-24">
+<!-- Header -->
+<header class="sticky top-0 z-20 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md px-4 pt-12 pb-2 border-b border-gray-200 dark:border-gray-800">
+<div class="flex items-center justify-between mb-4">
+<div class="flex flex-col">
+<span class="text-xs font-medium text-primary uppercase tracking-wider mb-1">AI Health Companion</span>
+<h1 class="text-2xl font-bold leading-tight">Prevention Hub</h1>
+</div>
+<button class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 dark:bg-surface-dark text-gray-600 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-[24px]">notifications</span>
+<span class="absolute top-3 right-5 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-background-light dark:border-background-dark"></span>
+</button>
+</div>
+<!-- Search Bar -->
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+<span class="material-symbols-outlined text-primary text-[20px]">temp_preferences_custom</span>
+</div>
+<input class="block w-full p-3 pl-10 text-sm rounded-xl bg-gray-100 dark:bg-surface-dark border-transparent focus:border-primary focus:ring-0 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400" placeholder="Ask AI about prevention tips..." type="text"/>
+<div class="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer">
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500 text-[20px]">mic</span>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 px-4 py-4 space-y-6">
+<!-- Featured Daily Tip Card -->
+<section>
+<div class="flex justify-between items-end mb-3">
+<h2 class="text-lg font-bold">Daily Insight</h2>
+<span class="text-xs text-primary font-medium">Updated 9:00 AM</span>
+</div>
+<div class="relative w-full h-64 rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
+<!-- Image -->
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Person drinking water from a glass in sunlight" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA5fwopA9YX6IscAX4wQdsDUkYjF86U-ulx0NywJnLwSbTyVh5X4HSskSRmBNm-CVAxivoR4aS4VSKsp0eGtTxDdIq8J2wh4Zx_Chu4U2A30K1oUJ4yQnHZ0T_-gHbh9WPSCcevHRrj1HiSCuxUOGOT1uyvMJnr4Mx3lqV9vPCw-kvpP21Mb6DptSk-ESKQm_KmuhNpzBq2kk-45XjbFR5pJWBQ3hz3Ivz7gxILSDo9_aVjZDVQVmiOERXo_Dv4C8I1eTDFdusPmz9Y');">
+</div>
+<!-- Gradient Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+<!-- Content -->
+<div class="absolute bottom-0 left-0 w-full p-5">
+<div class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary text-white mb-2">
+                            Hydration
+                        </div>
+<h3 class="text-xl font-bold text-white mb-1">Boost Your Immunity</h3>
+<p class="text-sm text-gray-200 line-clamp-2 mb-3">Drinking 3L of water daily can significantly improve your body's natural defense mechanisms.</p>
+<div class="flex items-center justify-between">
+<span class="text-xs text-gray-300 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">verified_user</span>
+                                Medically Reviewed
+                            </span>
+<button class="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-lg px-3 py-1.5 text-xs font-bold transition-colors">
+                                Read More
+                            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Categories Chips -->
+<section>
+<div class="flex gap-3 overflow-x-auto no-scrollbar pb-1">
+<button class="flex shrink-0 items-center justify-center px-4 py-2 rounded-full bg-primary text-white text-sm font-medium shadow-md shadow-primary/20">
+                        For You
+                    </button>
+<button class="flex shrink-0 items-center justify-center px-4 py-2 rounded-full bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 text-sm font-medium">
+                        Viral
+                    </button>
+<button class="flex shrink-0 items-center justify-center px-4 py-2 rounded-full bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 text-sm font-medium">
+                        Hygiene
+                    </button>
+<button class="flex shrink-0 items-center justify-center px-4 py-2 rounded-full bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 text-sm font-medium">
+                        Nutrition
+                    </button>
+<button class="flex shrink-0 items-center justify-center px-4 py-2 rounded-full bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 text-sm font-medium">
+                        Mental
+                    </button>
+</div>
+</section>
+<!-- Daily Goals Checklist -->
+<section>
+<h3 class="text-lg font-bold mb-3">Daily Goals</h3>
+<div class="bg-white dark:bg-surface-dark rounded-2xl p-1 shadow-sm border border-gray-100 dark:border-gray-800">
+<!-- Goal 1 -->
+<div class="flex items-center justify-between p-3 border-b border-gray-100 dark:border-gray-800 last:border-0">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400">
+<span class="material-symbols-outlined">water_drop</span>
+</div>
+<div>
+<p class="text-sm font-semibold text-gray-900 dark:text-white">Drink Water</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">Target: 2000ml</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Goal 2 -->
+<div class="flex items-center justify-between p-3 border-b border-gray-100 dark:border-gray-800 last:border-0">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center text-orange-600 dark:text-orange-400">
+<span class="material-symbols-outlined">pill</span>
+</div>
+<div>
+<p class="text-sm font-semibold text-gray-900 dark:text-white">Vitamin D</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">1 Tablet (1000 IU)</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Goal 3 -->
+<div class="flex items-center justify-between p-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400">
+<span class="material-symbols-outlined">bedtime</span>
+</div>
+<div>
+<p class="text-sm font-semibold text-gray-900 dark:text-white">Sleep Early</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">Target: 10:30 PM</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- AI Recommended / Prevention Topics -->
+<section>
+<div class="flex justify-between items-center mb-3">
+<h3 class="text-lg font-bold">AI Recommended</h3>
+<button class="text-primary text-sm font-medium">See All</button>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Card 1 -->
+<div class="flex items-center p-3 bg-white dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+<div class="w-16 h-16 rounded-lg bg-cover bg-center shrink-0 mr-4" data-alt="Hands being washed with soap lather" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCAeJz79RWuTE7kmnRVpq7zkOcwuBtUzWyvMPgyhRwW4ZUioVxAaN6WPN61Y1f3Ss4Nd0eKbmeodS-hhdFYW5T3DM3QyIhctaMxk9u6dZvuWzA_qVXVHQ-RrQAuAL1pioGC_TBkupw3J9MtmqORBYWrF5ZETqrulGkqBWNbuJMUhmdhsE32DQVVsQTuwHEKiGlDhpDEYNwho9QmtuBU3e5oy0USvJU189N6jIhBENWsssAw0-GUMSsP8pIYOUf2rGI6dx46UPtManBA');">
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2 mb-1">
+<h4 class="text-base font-semibold text-gray-900 dark:text-white truncate">Proper Hand Washing</h4>
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+</div>
+<p class="text-xs text-gray-500 dark:text-gray-400 line-clamp-2">Effective technique to remove 99% of germs. Duration: 20s.</p>
+</div>
+<span class="material-symbols-outlined text-gray-400 ml-2">chevron_right</span>
+</div>
+<!-- Card 2 -->
+<div class="flex items-center p-3 bg-white dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+<div class="w-16 h-16 rounded-lg bg-cover bg-center shrink-0 mr-4" data-alt="Abstract visualization of seasonal allergies pollen" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBz7wfT-g1Rm-LIfIOkoE7qylX4ybb2ROw3anhhHmmkXDrSPvQ1hScmfgScY80rYQjhHllOApQZJmF7HELUnSQljq1EDN4SVtRGujkg49VHyTlUh1yr4nfCnIl1tBC2fg-n1b18AsUheEoyp7KnSH73Bp23EIAQXpeo7qb9wtlJ1Uq6t4gger4QUzvfzWQEzIn-jDvyFcHcUJK-jEYcCsV_fC-b1UYGIKQcLl0vY4bdSY3mVaRghf6VgXtbjXzQ4XHDKyLGPW3fNoRs');">
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2 mb-1">
+<h4 class="text-base font-semibold text-gray-900 dark:text-white truncate">Seasonal Allergies</h4>
+<span class="w-2 h-2 rounded-full bg-yellow-500"></span>
+</div>
+<p class="text-xs text-gray-500 dark:text-gray-400 line-clamp-2">High pollen count detected in your area. Wear a mask outdoors.</p>
+</div>
+<span class="material-symbols-outlined text-gray-400 ml-2">chevron_right</span>
+</div>
+<!-- Card 3 -->
+<div class="flex items-center p-3 bg-white dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+<div class="w-16 h-16 rounded-lg bg-cover bg-center shrink-0 mr-4" data-alt="Person jogging in the park" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBynFnWQpYI1qzBctzN8Ofq29fj8a3QCw3M7A4QwxB6mpUV-89bYiTfo5uIAhLA5KipIh4DBnPSBbi1spSwekkTSY9GJuEwmHuYRi_Hhn0kx8HMFqTVlRUv89sKwewJDK7nLDsa_2L6mTsfkTKWf8wWom4j4Vsd0HzFsQdjnN7KzJxEly9R55IiKe-wsFU6l9ees-f0JEP4482VeRzaSSN4IWS2Ij3o74YiqsRn2imp5AYj0a0x2VxPLD9qmbWzGp-LkI2uR9nk3j7N');">
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2 mb-1">
+<h4 class="text-base font-semibold text-gray-900 dark:text-white truncate">Cardio Basics</h4>
+</div>
+<p class="text-xs text-gray-500 dark:text-gray-400 line-clamp-2">30 mins of light cardio can reduce chronic illness risk by 40%.</p>
+</div>
+<span class="material-symbols-outlined text-gray-400 ml-2">chevron_right</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating Action Button for AI -->
+<div class="fixed bottom-24 right-4 z-40">
+<button class="group flex items-center justify-center w-14 h-14 bg-primary rounded-full shadow-lg shadow-primary/40 hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-white text-[28px] group-hover:animate-pulse">smart_toy</span>
+</button>
+</div>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 w-full bg-white/90 dark:bg-background-dark/95 backdrop-blur-lg border-t border-gray-200 dark:border-gray-800 pb-5 pt-3 px-6 z-30">
+<ul class="flex justify-between items-center">
+<li>
+<a class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+</li>
+<li>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-[24px] fill-current">shield</span>
+<span class="text-[10px] font-medium">Prevent</span>
+</a>
+</li>
+<li>
+<a class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">forum</span>
+<span class="text-[10px] font-medium">Chat</span>
+</a>
+</li>
+<li>
+<a class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</body></html>

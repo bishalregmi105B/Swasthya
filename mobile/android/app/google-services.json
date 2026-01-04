@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "723030994126",
+    "project_id": "swasthya-d260c",
+    "storage_bucket": "swasthya-d260c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:723030994126:android:6aa24557429baa1fcc349f",
+        "android_client_info": {
+          "package_name": "com.example.swasthya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "723030994126-us63a51s807u52abdo2srr2ln36koihg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAW7ak5I8DZKv6Ep2oyeMRySchOluL5bk0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "723030994126-us63a51s807u52abdo2srr2ln36koihg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

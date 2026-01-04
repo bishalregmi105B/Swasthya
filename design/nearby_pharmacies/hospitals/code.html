@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nearby Pharmacies/Hospitals</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                        "card-dark": "#1c232d",
+                        "card-dark-lighter": "#282f39",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding for clean UI */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .glass-effect {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white h-screen overflow-hidden w-full flex flex-col relative">
+<!-- Map Background Layer -->
+<div class="absolute inset-0 z-0 h-[65%] w-full bg-cover bg-center" data-alt="Dark stylized map of a city street grid at night" data-location="San Francisco, USA" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD128WpzNhQfJs-L90s5vsOwKYkocvDdzWNsPOIn49XfvvxlIp1yAdKXtAWk94oCa7ZGUwSZ6Etv5m-hak2N0ExF4AaqZNGMMvC6HpaTXPJPnx1JhEQTgcZG9Ms1SBL-M3XDDhlVAvREBvQVwBB44RHj8ykSh_lyDWvCCaEGOwzcNR6xU3ZeKxKIb8i_8W83mPrgXlpgfGTuJhhMKTAaIkaQj0JDroyW-kRrWZ4qX2iIbSanJTo8bfnoqhgv4YeGkNTxggQZJ7nrbKS'); filter: brightness(0.7) contrast(1.1) grayscale(0.2);">
+<!-- Map Overlay Gradient for readability at top -->
+<div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/80 to-transparent pointer-events-none"></div>
+<!-- Simulated Map Pins -->
+<!-- User Location -->
+<div class="absolute top-[45%] left-[50%] -translate-x-1/2 -translate-y-1/2 z-10">
+<div class="relative flex items-center justify-center size-8">
+<div class="absolute w-full h-full rounded-full bg-primary/40 animate-ping"></div>
+<div class="relative size-4 rounded-full bg-primary border-2 border-white shadow-lg"></div>
+</div>
+</div>
+<!-- Pin 1: Hospital -->
+<div class="absolute top-[35%] left-[30%] z-10 flex flex-col items-center">
+<div class="bg-primary text-white p-2 rounded-full shadow-lg border-2 border-white/20 transform hover:scale-110 transition-transform cursor-pointer">
+<span class="material-symbols-outlined text-[20px] block">local_hospital</span>
+</div>
+<div class="mt-1 px-2 py-0.5 bg-black/70 backdrop-blur-md rounded text-[10px] font-medium text-white shadow-sm">St. Mary's</div>
+</div>
+<!-- Pin 2: Pharmacy -->
+<div class="absolute top-[42%] left-[70%] z-10 flex flex-col items-center">
+<div class="bg-slate-600 text-white p-2 rounded-full shadow-lg border-2 border-white/20 transform hover:scale-110 transition-transform cursor-pointer">
+<span class="material-symbols-outlined text-[20px] block">medication</span>
+</div>
+<div class="mt-1 px-2 py-0.5 bg-black/70 backdrop-blur-md rounded text-[10px] font-medium text-white shadow-sm">Walgreens</div>
+</div>
+<!-- Pin 3: Clinic -->
+<div class="absolute top-[20%] left-[60%] z-10 flex flex-col items-center opacity-80">
+<div class="bg-slate-600 text-white p-2 rounded-full shadow-lg border-2 border-white/20">
+<span class="material-symbols-outlined text-[20px] block">medical_services</span>
+</div>
+</div>
+</div>
+<!-- Top Floating Search & Filter Section -->
+<div class="relative z-20 flex flex-col w-full px-4 pt-14 gap-4 pointer-events-none">
+<!-- Search Bar -->
+<div class="pointer-events-auto shadow-xl shadow-black/20 rounded-xl">
+<label class="flex flex-col min-w-40 h-14 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full bg-card-dark-lighter/90 glass-effect border border-white/10 backdrop-blur-xl">
+<div class="text-[#9da8b9] flex border-none items-center justify-center pl-4 rounded-l-xl">
+<span class="material-symbols-outlined text-[24px]">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-transparent focus:border-none h-full placeholder:text-[#9da8b9] px-4 pl-2 text-base font-normal leading-normal" placeholder="Search 'Cardiologist' or 'CVS'" value=""/>
+<div class="flex items-center justify-center pr-2">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-white/10 text-white">
+<span class="material-symbols-outlined">mic</span>
+</button>
+</div>
+</div>
+</label>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-2 overflow-x-auto no-scrollbar pointer-events-auto pb-2 -mx-4 px-4 mask-image-linear-gradient">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary text-white pl-4 pr-4 shadow-lg shadow-primary/20 border border-primary/50">
+<span class="text-sm font-medium">All</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-card-dark-lighter/80 backdrop-blur-md text-white pl-4 pr-4 shadow-lg border border-white/10 hover:bg-card-dark-lighter">
+<span class="text-sm font-medium">Open 24/7</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-card-dark-lighter/80 backdrop-blur-md text-white pl-4 pr-4 shadow-lg border border-white/10 hover:bg-card-dark-lighter">
+<span class="text-sm font-medium">Hospitals</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-card-dark-lighter/80 backdrop-blur-md text-white pl-4 pr-4 shadow-lg border border-white/10 hover:bg-card-dark-lighter">
+<span class="text-sm font-medium">Pharmacies</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-card-dark-lighter/80 backdrop-blur-md text-white pl-4 pr-4 shadow-lg border border-white/10 hover:bg-card-dark-lighter">
+<span class="text-sm font-medium">Insurance</span>
+</button>
+</div>
+</div>
+<!-- Map Controls (Side) -->
+<div class="absolute right-4 top-1/2 -translate-y-1/2 z-20 flex flex-col gap-3">
+<div class="flex flex-col bg-card-dark-lighter/90 backdrop-blur-md rounded-xl border border-white/10 overflow-hidden shadow-lg">
+<button class="flex size-12 items-center justify-center hover:bg-white/5 active:bg-white/10 border-b border-white/10">
+<span class="material-symbols-outlined text-white">add</span>
+</button>
+<button class="flex size-12 items-center justify-center hover:bg-white/5 active:bg-white/10">
+<span class="material-symbols-outlined text-white">remove</span>
+</button>
+</div>
+<button class="flex size-12 items-center justify-center bg-card-dark-lighter/90 backdrop-blur-md rounded-xl border border-white/10 shadow-lg hover:bg-white/5 active:bg-white/10 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">near_me</span>
+</button>
+</div>
+<!-- FAB: Ask MedBot -->
+<!-- Positioned just above the bottom sheet content area -->
+<div class="absolute bottom-[38%] right-4 z-30">
+<button class="flex items-center justify-center rounded-full h-12 pl-4 pr-5 bg-primary text-white shadow-[0_8px_20px_rgba(19,109,236,0.4)] hover:bg-primary/90 transition-all active:scale-95 border border-white/10 gap-2">
+<span class="material-symbols-outlined text-[20px]">auto_awesome</span>
+<span class="text-sm font-bold tracking-wide">Ask MedBot</span>
+</button>
+</div>
+<!-- Bottom Sheet Container -->
+<div class="absolute bottom-0 left-0 right-0 h-[45%] z-20 flex flex-col bg-background-dark dark:bg-[#111418] rounded-t-3xl shadow-[0_-8px_30px_rgba(0,0,0,0.6)] border-t border-white/5">
+<!-- Handle -->
+<div class="w-full flex items-center justify-center pt-3 pb-2 cursor-grab active:cursor-grabbing">
+<div class="h-1.5 w-12 rounded-full bg-slate-600/50"></div>
+</div>
+<!-- Header -->
+<div class="px-5 pb-3 flex items-center justify-between border-b border-white/5">
+<div>
+<h2 class="text-white text-lg font-bold">Nearby Results</h2>
+<p class="text-slate-400 text-xs">12 locations found</p>
+</div>
+<button class="flex items-center gap-1 text-slate-400 text-sm hover:text-white transition-colors">
+                Sort by <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+</div>
+<!-- Scrollable List -->
+<div class="flex-1 overflow-y-auto px-4 pb-8 pt-4 space-y-4 overscroll-contain">
+<!-- Card 1: AI Match / High Priority -->
+<div class="flex flex-col p-4 bg-card-dark border border-primary/30 rounded-2xl gap-3 shadow-lg relative overflow-hidden group">
+<!-- AI Badge -->
+<div class="absolute top-0 right-0 bg-primary/20 text-primary text-[10px] font-bold px-3 py-1 rounded-bl-xl border-l border-b border-primary/20 backdrop-blur-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+                    AI MATCH
+                </div>
+<div class="flex justify-between items-start mt-1">
+<div class="flex gap-3">
+<div class="size-12 rounded-xl bg-blue-900/30 flex items-center justify-center text-primary border border-primary/20 shrink-0">
+<span class="material-symbols-outlined">local_hospital</span>
+</div>
+<div>
+<h3 class="text-white font-semibold text-lg leading-tight">Saint Mary's Medical Center</h3>
+<p class="text-slate-400 text-xs mt-1 flex items-center gap-1">
+<span class="text-white font-medium">1.2 mi</span> • Hospital • <span class="text-green-400">Open 24h</span>
+</p>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 mt-1 px-1">
+<div class="flex items-center gap-0.5 text-yellow-400 text-xs">
+<span class="font-bold text-sm">4.8</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="text-slate-500 text-xs">• Accepts BlueCross</span>
+</div>
+<div class="flex gap-3 mt-2">
+<button class="flex-1 bg-primary hover:bg-primary/90 text-white h-10 rounded-lg font-medium text-sm flex items-center justify-center gap-2 shadow-lg shadow-primary/20 transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined text-[18px]">directions</span>
+                        Navigate
+                    </button>
+<button class="size-10 bg-white/5 hover:bg-white/10 text-white rounded-lg flex items-center justify-center border border-white/10 transition-colors">
+<span class="material-symbols-outlined text-[20px]">call</span>
+</button>
+<button class="size-10 bg-white/5 hover:bg-white/10 text-white rounded-lg flex items-center justify-center border border-white/10 transition-colors">
+<span class="material-symbols-outlined text-[20px]">info</span>
+</button>
+</div>
+</div>
+<!-- Card 2: Standard Result -->
+<div class="flex flex-col p-4 bg-card-dark-lighter rounded-2xl gap-3 border border-white/5">
+<div class="flex justify-between items-start">
+<div class="flex gap-3">
+<div class="size-12 rounded-xl bg-slate-700/30 flex items-center justify-center text-slate-300 border border-white/10 shrink-0">
+<span class="material-symbols-outlined">medication</span>
+</div>
+<div>
+<h3 class="text-white font-semibold text-lg leading-tight">Walgreens Pharmacy</h3>
+<p class="text-slate-400 text-xs mt-1 flex items-center gap-1">
+<span class="text-white font-medium">0.3 mi</span> • Pharmacy • <span class="text-orange-400">Closes 9 PM</span>
+</p>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-white/5 px-2 py-1 rounded text-white text-xs border border-white/5">
+<span class="font-bold">4.2</span> <span class="material-symbols-outlined text-[12px] text-yellow-400" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="flex gap-3 mt-2">
+<button class="flex-1 bg-white/10 hover:bg-white/15 text-white h-10 rounded-lg font-medium text-sm flex items-center justify-center gap-2 border border-white/5 transition-all">
+<span class="material-symbols-outlined text-[18px]">directions</span>
+                        Navigate
+                    </button>
+<button class="flex-1 bg-transparent hover:bg-white/5 text-slate-300 h-10 rounded-lg font-medium text-sm flex items-center justify-center gap-2 border border-white/10 transition-colors">
+                        Details
+                    </button>
+</div>
+</div>
+<!-- Card 3: Standard Result -->
+<div class="flex flex-col p-4 bg-card-dark-lighter rounded-2xl gap-3 border border-white/5 opacity-80">
+<div class="flex justify-between items-start">
+<div class="flex gap-3">
+<div class="size-12 rounded-xl bg-slate-700/30 flex items-center justify-center text-slate-300 border border-white/10 shrink-0">
+<span class="material-symbols-outlined">medical_services</span>
+</div>
+<div>
+<h3 class="text-white font-semibold text-lg leading-tight">Downtown Clinic</h3>
+<p class="text-slate-400 text-xs mt-1 flex items-center gap-1">
+<span class="text-white font-medium">2.5 mi</span> • Clinic • <span class="text-red-400">Closed</span>
+</p>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-white/5 px-2 py-1 rounded text-white text-xs border border-white/5">
+<span class="font-bold">3.9</span> <span class="material-symbols-outlined text-[12px] text-yellow-400" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<div class="h-10"></div> <!-- Spacer for scrolling -->
+</div>
+</div>
+</body></html>

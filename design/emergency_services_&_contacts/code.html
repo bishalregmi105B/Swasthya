@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Emergency Assistance</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark transition-colors duration-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden font-display">
+<!-- Top App Bar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-50 border-b border-gray-200 dark:border-gray-800">
+<div class="text-slate-900 dark:text-white flex size-12 shrink-0 items-center justify-center cursor-pointer rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">Emergency Assistance</h2>
+</div>
+<!-- Scrollable Content -->
+<div class="flex-1 flex flex-col gap-6 p-4">
+<!-- Location Map Card -->
+<div class="flex flex-col gap-3">
+<div class="relative w-full h-48 rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
+<div class="absolute inset-0 bg-center bg-no-repeat bg-cover" data-alt="Map showing street view of current user location" data-location="Downtown Seattle" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAu9w-wzgWR12dkYQMwqyvWcbaHwChUue258X7OaLjbnDBhbKgjwr2I9PeEk4mOZu6JzqfMOKiugyg43eL8XXzvB4DBqUMKtSpUn1yfpkV1kF_pJp3oZ71ezmff9GDf4rm7e2-UevqB9Bv8lM8_eZPS23D9ZprZoMEQAkQq9wjE4kiAIaWr3u3YxZFdgjLKjGL_liqNGzDGF-xnCrmLvnD7Gb7C-Izd130DxuruZwNrM5cDYmUEJdJSXwDldk4P2UBT51CgOF3kWCyz");'>
+</div>
+<!-- Overlay Gradient -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<!-- Location Info Overlay -->
+<div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+<div class="flex justify-between items-end">
+<div>
+<p class="text-xs font-medium text-gray-300 uppercase tracking-wider mb-1">Your Location</p>
+<h3 class="text-lg font-bold leading-tight">1201 3rd Ave, Seattle</h3>
+<p class="text-sm text-gray-300">47.6062° N, 122.3321° W</p>
+</div>
+<button class="flex items-center gap-2 bg-white/20 backdrop-blur-md hover:bg-white/30 text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors">
+<span class="material-symbols-outlined text-[18px]">share_location</span>
+                                Share
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Primary SOS Button -->
+<div class="flex flex-col gap-2">
+<button class="relative group w-full h-20 bg-[#ef4444] hover:bg-[#dc2626] text-white rounded-xl shadow-lg shadow-red-900/20 active:scale-[0.99] transition-all flex items-center justify-between px-6 overflow-hidden">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/diagonal-stripes.png')] opacity-10"></div>
+<div class="z-10 flex items-center gap-4">
+<div class="bg-white/20 p-2 rounded-full flex items-center justify-center animate-pulse">
+<span class="material-symbols-outlined text-[28px]">sos</span>
+</div>
+<div class="flex flex-col items-start">
+<span class="text-xl font-bold tracking-tight">SOS - CALL 911</span>
+<span class="text-xs text-red-100 font-medium">Slide or tap for emergency</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[32px] z-10 opacity-60">chevron_right</span>
+</button>
+</div>
+<!-- Quick Access Grid -->
+<div>
+<h3 class="text-slate-900 dark:text-white text-base font-bold mb-3 px-1">Quick Dial Services</h3>
+<div class="grid grid-cols-2 gap-3">
+<!-- Ambulance -->
+<button class="flex flex-col items-center justify-center gap-3 p-4 bg-white dark:bg-[#1c2027] border border-gray-200 dark:border-gray-800 rounded-xl hover:bg-gray-50 dark:hover:bg-[#252a33] transition-colors group">
+<div class="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/30 text-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">ambulance</span>
+</div>
+<span class="text-slate-900 dark:text-white font-medium text-sm">Ambulance</span>
+</button>
+<!-- Police -->
+<button class="flex flex-col items-center justify-center gap-3 p-4 bg-white dark:bg-[#1c2027] border border-gray-200 dark:border-gray-800 rounded-xl hover:bg-gray-50 dark:hover:bg-[#252a33] transition-colors group">
+<div class="w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">local_police</span>
+</div>
+<span class="text-slate-900 dark:text-white font-medium text-sm">Police</span>
+</button>
+<!-- Fire Dept -->
+<button class="flex flex-col items-center justify-center gap-3 p-4 bg-white dark:bg-[#1c2027] border border-gray-200 dark:border-gray-800 rounded-xl hover:bg-gray-50 dark:hover:bg-[#252a33] transition-colors group">
+<div class="w-12 h-12 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">local_fire_department</span>
+</div>
+<span class="text-slate-900 dark:text-white font-medium text-sm">Fire Dept.</span>
+</button>
+<!-- Poison Control -->
+<button class="flex flex-col items-center justify-center gap-3 p-4 bg-white dark:bg-[#1c2027] border border-gray-200 dark:border-gray-800 rounded-xl hover:bg-gray-50 dark:hover:bg-[#252a33] transition-colors group">
+<div class="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">medical_services</span>
+</div>
+<span class="text-slate-900 dark:text-white font-medium text-sm">Poison Control</span>
+</button>
+</div>
+</div>
+<!-- AI Triage Section -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-2 px-1">
+<span class="material-symbols-outlined text-primary">smart_toy</span>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight">AI Rapid Triage</h2>
+</div>
+<div class="bg-primary/5 dark:bg-primary/10 border border-primary/20 rounded-xl p-4">
+<p class="text-sm text-slate-600 dark:text-gray-300 mb-3">Not sure who to call? Describe symptoms for immediate AI guidance.</p>
+<label class="flex flex-col w-full">
+<div class="flex w-full items-stretch rounded-lg shadow-sm">
+<input class="flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-l-lg text-slate-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-[#3b4554] bg-white dark:bg-[#1c2027] h-12 placeholder:text-gray-400 dark:placeholder:text-[#9da8b9] px-4 text-base font-normal leading-normal" placeholder="e.g. Sharp chest pain..." value=""/>
+<button class="text-white flex items-center justify-center px-4 rounded-r-lg bg-primary hover:bg-blue-600 transition-colors border border-primary">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</label>
+</div>
+</div>
+<!-- Personal Contacts List -->
+<div>
+<div class="flex items-center justify-between mb-3 px-1">
+<h3 class="text-slate-900 dark:text-white text-base font-bold">Emergency Contacts</h3>
+<button class="text-primary text-sm font-medium hover:underline">Manage</button>
+</div>
+<div class="flex flex-col gap-2">
+<!-- Contact 1 -->
+<div class="flex items-center justify-between p-3 bg-white dark:bg-[#1c2027] border border-gray-200 dark:border-gray-800 rounded-xl shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-cover bg-center" data-alt="Portrait of Sarah Jenkins, wife" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAjLC9BcJ-RzGnSHHVG59gGuwb-eBdEeWYGI_f3FZc7nPsueNKcGhpmIokZ-DZzTtnB5nUXp9QHh5VzSOvSRawURnTFIvVC_hlBhkamXhx8JSRKkt7lmKwbcMSRpPKr9WqACyJcyvXwB90y1xi246bdQgIh8761cQmeQba2zdHEMwKH_izJfVL4wFkFauuNuJ5qgiYJoRZftWhAGs94nNO_Qywe83rfxPQUUmDgoDuMP7TWDj2U4PZw4AixjI08ridZNg3m_Jj4gmHJ");'>
+</div>
+<div>
+<p class="text-slate-900 dark:text-white font-semibold text-sm">Sarah Jenkins</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">Wife • ICE Contact</p>
+</div>
+</div>
+<button class="w-9 h-9 rounded-full bg-green-100 dark:bg-green-900/20 text-green-600 dark:text-green-400 flex items-center justify-center hover:bg-green-200 dark:hover:bg-green-900/40 transition-colors">
+<span class="material-symbols-outlined text-[20px]">call</span>
+</button>
+</div>
+<!-- Contact 2 -->
+<div class="flex items-center justify-between p-3 bg-white dark:bg-[#1c2027] border border-gray-200 dark:border-gray-800 rounded-xl shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-cover bg-center" data-alt="Portrait of Dr. Michael Chen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBBJ1CDNt9ukEWPBkbMP_tfDiWnw-MavtcSLhStgaoLLzp2aO_jEVQJA_EuBx-xGUFTT6jxilCSfSvGXlO3E_K7aWulUTE0KSo7mMpb0W5Iyzn912s8zZV4iS40pJ4s7SKW589K75PA-V4E-TsG2mUY3ZgsMzf8x--sv0rWgbIz7RLXjO-XcoFgs_z52X17lId3_YfKtYjjpyAJ6k7wSBsLwCxLuvXENSvSoIqJHnKXqYfv4L2Ylmgf3hKmMvlUjxKh8aY1TGkZHLSj");'>
+</div>
+<div>
+<p class="text-slate-900 dark:text-white font-semibold text-sm">Dr. Michael Chen</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">Cardiologist</p>
+</div>
+</div>
+<button class="w-9 h-9 rounded-full bg-green-100 dark:bg-green-900/20 text-green-600 dark:text-green-400 flex items-center justify-center hover:bg-green-200 dark:hover:bg-green-900/40 transition-colors">
+<span class="material-symbols-outlined text-[20px]">call</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Spacer for bottom safe area -->
+<div class="h-8"></div>
+</div>
+</div>
+</body></html>

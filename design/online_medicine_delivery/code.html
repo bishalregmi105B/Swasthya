@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Online Medicine Delivery</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                        "surface-dark": "#1c232e",
+                        "surface-light": "#ffffff",
+                        "border-dark": "#2a3441",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.375rem", 
+                        "md": "0.375rem",
+                        "lg": "0.5rem", 
+                        "xl": "0.75rem", 
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white min-h-screen antialiased selection:bg-primary selection:text-white">
+<!-- Mobile Container -->
+<div class="mx-auto max-w-md w-full min-h-screen relative pb-24 overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-20 bg-background-light dark:bg-background-dark/95 backdrop-blur-sm p-4 pb-2 transition-colors">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-surface-light dark:bg-surface-dark shadow-sm">
+<span class="material-symbols-outlined text-primary">location_on</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-medium text-gray-500 dark:text-gray-400">Delivery to</span>
+<div class="flex items-center gap-1">
+<h2 class="text-base font-bold leading-tight">Home, 123 Main St</h2>
+<span class="material-symbols-outlined text-sm text-gray-500">expand_more</span>
+</div>
+</div>
+</div>
+<button class="relative flex h-10 w-10 items-center justify-center rounded-full bg-surface-light dark:bg-surface-dark shadow-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined text-gray-700 dark:text-white">notifications</span>
+<span class="absolute top-2 right-2.5 h-2 w-2 rounded-full bg-red-500 ring-2 ring-white dark:ring-surface-dark"></span>
+</button>
+</div>
+</header>
+<!-- Main Content Scroll Area -->
+<main class="flex flex-col gap-6 px-4 pt-2">
+<!-- Active Order Status (Live Activity Style) -->
+<section>
+<div class="relative overflow-hidden rounded-xl bg-surface-light dark:bg-surface-dark p-4 shadow-sm ring-1 ring-black/5 dark:ring-white/10">
+<div class="flex items-start justify-between gap-4">
+<div class="flex flex-1 flex-col gap-1 z-10">
+<div class="flex items-center gap-2 mb-1">
+<span class="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
+<p class="text-xs font-bold uppercase tracking-wider text-primary">On the way</p>
+</div>
+<h3 class="text-lg font-bold leading-tight">Order #2391</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">Arriving in <span class="text-gray-900 dark:text-white font-semibold">15 mins</span></p>
+<!-- Progress Bar -->
+<div class="mt-3 w-full max-w-[180px]">
+<div class="h-1.5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
+<div class="h-1.5 w-3/4 rounded-full bg-primary"></div>
+</div>
+</div>
+<button class="mt-4 flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white shadow-md hover:bg-blue-600 transition-colors w-fit">
+<span class="material-symbols-outlined text-[18px]">map</span>
+                                Track Order
+                            </button>
+</div>
+<!-- Mini Map Visual -->
+<div class="absolute right-0 top-0 bottom-0 w-32 md:w-40 opacity-40 dark:opacity-30 mix-blend-overlay">
+<div class="w-full h-full bg-cover bg-center" data-alt="Abstract map view showing streets and location marker" data-location="New York" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA4DwlgvqtRC-aRBQO92MaDlu26BfxL7VgtpdwXSI4jszMewi3dG312C3s91HPPtKug9d55OQgtmoeV3MQmFfnuFoRaBtCbeN80frpvTiY8LF8rBaZLE8DUg-WKRTaGYf7wXusCyp3lc0X3P4zpIX1ctqOtUpnTd9XnVWOKu_gZHPMI5BnWMRDF2y8gfFeCOnmlVK8JnL1ZoreuPyV89nLW_sZFCgvQJtpG8S76zd0DQ2DcSAxRrJCkuMfHJK784mUuu8FVenCpNkMW");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-l from-transparent to-surface-light dark:to-surface-dark"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Search Bar -->
+<section>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+<span class="material-symbols-outlined text-gray-400">search</span>
+</div>
+<input class="block w-full rounded-xl border-none bg-surface-light dark:bg-surface-dark py-3.5 pl-10 pr-12 text-sm text-gray-900 dark:text-white placeholder-gray-500 focus:ring-2 focus:ring-primary shadow-sm" placeholder="Search medicines or upload Rx" type="text"/>
+<div class="absolute inset-y-0 right-0 flex items-center pr-2">
+<button class="p-1 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 text-primary transition-colors">
+<span class="material-symbols-outlined">center_focus_strong</span>
+</button>
+</div>
+</div>
+</section>
+<!-- AI Action Panel -->
+<section class="@container">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 rounded-xl border border-primary/20 bg-gradient-to-br from-primary/10 to-transparent p-5">
+<div class="flex gap-3">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined filled">smart_toy</span>
+</div>
+<div class="flex flex-col">
+<p class="text-base font-bold leading-tight">How are you feeling?</p>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Ask our AI pharmacist for personalized advice.</p>
+</div>
+</div>
+<button class="w-full sm:w-auto shrink-0 rounded-lg bg-surface-dark dark:bg-white px-4 py-2 text-sm font-semibold text-white dark:text-black shadow-sm">
+                        Chat with AI
+                    </button>
+</div>
+</section>
+<!-- Categories Chips -->
+<section>
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-lg font-bold">Shop by Category</h3>
+</div>
+<div class="-mx-4 flex gap-3 overflow-x-auto px-4 pb-2 no-scrollbar">
+<button class="flex shrink-0 items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-white shadow-md">
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+                        All
+                    </button>
+<button class="flex shrink-0 items-center gap-2 rounded-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-border-dark px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap">
+<span class="material-symbols-outlined text-[18px]">pill</span>
+                        Antibiotics
+                    </button>
+<button class="flex shrink-0 items-center gap-2 rounded-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-border-dark px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap">
+<span class="material-symbols-outlined text-[18px]">nutrition</span>
+                        Vitamins
+                    </button>
+<button class="flex shrink-0 items-center gap-2 rounded-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-border-dark px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap">
+<span class="material-symbols-outlined text-[18px]">medical_services</span>
+                        First Aid
+                    </button>
+<button class="flex shrink-0 items-center gap-2 rounded-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-border-dark px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap">
+<span class="material-symbols-outlined text-[18px]">healing</span>
+                        Pain Relief
+                    </button>
+</div>
+</section>
+<!-- Popular Near You -->
+<section>
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-lg font-bold">Best Sellers</h3>
+<a class="text-sm font-medium text-primary hover:text-blue-400" href="#">See all</a>
+</div>
+<div class="-mx-4 flex gap-4 overflow-x-auto px-4 pb-4 no-scrollbar snap-x snap-mandatory">
+<!-- Product Card 1 -->
+<div class="snap-start shrink-0 w-[160px] flex flex-col gap-2">
+<div class="relative aspect-square w-full overflow-hidden rounded-xl bg-surface-light dark:bg-surface-dark border border-gray-100 dark:border-border-dark">
+<span class="absolute top-2 left-2 z-10 rounded bg-green-500/90 px-1.5 py-0.5 text-[10px] font-bold text-white backdrop-blur-sm">FDA Approved</span>
+<img alt="Medicine Bottle" class="h-full w-full object-cover p-2" data-alt="White plastic medicine bottle with generic label" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOi38UBqfsuMh7QFqX_wpFgo6A2SZ1xFpSc22YvtikVlosGjubfoQ44iqZpfpy7-TYTk9Uc3H30BdlZ2VXbymNTUag_8xDejFnP9JFhkgBs4CeZ83N8A_i7RV1kS_JFhGsIPNrjcryqqo3LWF34-DFzeoABKxaaC55XPy42WcJ4Isif1CYR_-7rrRPI_bCgBQJd8XjridhX8a1DtWhkGYUZmrApMCPVNrZwC6q0r_n-z-Ql9iV_4R9gElHg-dkBr23ima_Q0n2GOdx"/>
+<button class="absolute bottom-2 right-2 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white shadow-lg hover:bg-blue-600">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+<div>
+<div class="flex items-center justify-between">
+<h4 class="truncate text-sm font-bold text-gray-900 dark:text-white">Multivitamin</h4>
+<div class="flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px] text-yellow-400 filled">star</span>
+<span class="text-[10px] font-medium">4.8</span>
+</div>
+</div>
+<p class="text-xs text-gray-500 truncate">Generic • 60 Tablets</p>
+<p class="mt-1 text-sm font-bold text-primary">$12.99</p>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="snap-start shrink-0 w-[160px] flex flex-col gap-2">
+<div class="relative aspect-square w-full overflow-hidden rounded-xl bg-surface-light dark:bg-surface-dark border border-gray-100 dark:border-border-dark">
+<img alt="Pills Blister Pack" class="h-full w-full object-cover p-2" data-alt="Blister pack of red and white pills" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF3rYCXgLIq-TR5zfgfIYKGpHUh30Bmcu50GyIoQ1WOUqcL7X8CZYOeEDziNfwLpMx5ZyQdjdRxFG9sT6n1ZrkJ-rF6Ltw-mCxZ1mbkGCXvt3eppQ9XQJe99H3hiHqBIpEyEfEviYbVkjnWmhgD4nqqJBQBEcOjAmnIlbOfa41vCrFvFa2ssS7SWJxpuA5o0jsn0CTd9R-1U_ypmq0VIow1eXUM8bw1AqbboGLjx7F4Sd-ZTYFNngHuaAi4KaqGuuuU93XwHGb2CiM"/>
+<button class="absolute bottom-2 right-2 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white shadow-lg hover:bg-blue-600">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+<div>
+<div class="flex items-center justify-between">
+<h4 class="truncate text-sm font-bold text-gray-900 dark:text-white">Pain Relief X</h4>
+<div class="flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px] text-yellow-400 filled">star</span>
+<span class="text-[10px] font-medium">4.5</span>
+</div>
+</div>
+<p class="text-xs text-gray-500 truncate">PharmaInc • 20 Caps</p>
+<p class="mt-1 text-sm font-bold text-primary">$8.50</p>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="snap-start shrink-0 w-[160px] flex flex-col gap-2">
+<div class="relative aspect-square w-full overflow-hidden rounded-xl bg-surface-light dark:bg-surface-dark border border-gray-100 dark:border-border-dark">
+<img alt="Ointment Tube" class="h-full w-full object-cover p-2" data-alt="Tube of medicinal cream or ointment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv_MCDONNypnJvu15507BAt2G_4Zp0GxAzumN9hJ2HrjoYcDgRSPyxyC3P3WgQ-YUhHgGnHp-ruBYnhKXTB6e0vzgO5y5GpFaG9SiNN0SYFPxcWHqMlW6EZ6DWs8n4AC9W2HVq8aKdpj2SH00PcVVl181rIMV0NFinNLsMWvZrX7eqZbt29UVLDpB6uqLolrxEc1IFeErTUve7TZPWxb1tyX6z6dKW2qzP_Nwv1bU_LftabLYjm3JfZCkUVXQwKVBH7nyxsiDwWi4y"/>
+<button class="absolute bottom-2 right-2 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white shadow-lg hover:bg-blue-600">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+<div>
+<div class="flex items-center justify-between">
+<h4 class="truncate text-sm font-bold text-gray-900 dark:text-white">HealFast Gel</h4>
+<div class="flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px] text-yellow-400 filled">star</span>
+<span class="text-[10px] font-medium">4.9</span>
+</div>
+</div>
+<p class="text-xs text-gray-500 truncate">SkinCare • 50g</p>
+<p class="mt-1 text-sm font-bold text-primary">$15.00</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Partnered Pharmacies -->
+<section class="pb-6">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-lg font-bold">Partnered Pharmacies</h3>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Pharmacy Item 1 -->
+<div class="flex items-center gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-3 shadow-sm border border-transparent hover:border-primary/50 transition-colors">
+<div class="h-16 w-16 shrink-0 overflow-hidden rounded-lg bg-white p-1">
+<img alt="Pharmacy Logo" class="h-full w-full object-contain" data-alt="Green cross pharmacy logo symbol" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAldGxuJaHOYcpe8OcujDo8W1wbTZqBC9FNN9UTYbtHOrmPB1Qtbxy3p5BCyiKxuJMpihe_A78Fs9R2-KwOwqgkEsT7xMRT1JVj0V-YtFGzssXv55hwSuJXC-EvorJJs7UTZPs-0aNVJKusJONZ6SyLmcgHeTM48u0w9EryNVRQuz0UynM9Xz0-HyQUKtEUkGmYRDgdIkTfVcgYDwAld1Qu6vBhLm89U8UoLTI8TUyEGPXlq47BkoYW7qpuyw4wRFTG1G9akGOC_G2r"/>
+</div>
+<div class="flex flex-1 flex-col">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-gray-900 dark:text-white">HealthPlus Pharmacy</h4>
+<div class="flex items-center gap-1 rounded bg-green-500/20 px-1.5 py-0.5">
+<span class="material-symbols-outlined text-[14px] text-green-500 filled">verified</span>
+<span class="text-[10px] font-bold text-green-500">Verified</span>
+</div>
+</div>
+<p class="text-xs text-gray-500">0.8 miles • 10-20 min delivery</p>
+<div class="mt-2 flex items-center gap-3">
+<span class="flex items-center text-xs font-medium text-gray-400">
+<span class="material-symbols-outlined mr-1 text-[14px] text-yellow-400 filled">star</span>
+                                    4.8 (1.2k)
+                                </span>
+<span class="text-xs text-gray-600 dark:text-gray-500">Free delivery over $25</span>
+</div>
+</div>
+</div>
+<!-- Pharmacy Item 2 -->
+<div class="flex items-center gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-3 shadow-sm border border-transparent hover:border-primary/50 transition-colors">
+<div class="h-16 w-16 shrink-0 overflow-hidden rounded-lg bg-white p-1">
+<img alt="Pharmacy Logo" class="h-full w-full object-contain" data-alt="Blue medical cross icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPc2r0NUQc2PXUWltFzTDeFfF3DijMfrdnAQYisRa0hGzY86VJVRsJjEQV595uEZ4UMcK0-mPIHHG634Y-ER9w9wK9kWzldrpPVkQuKB5eDIupXOcqMo0XooXfOseBMd729eMI1puFsqElyroptvfisuykzJ6VgJi6KVvQqpRsgknVKHNMihCqWt--_rrOLOdl8Z0iJrYAJ_p4FR2gPqPNXyIYx4LMZDUj-Eqr7WazgyeLdhGKDUrNkzwTEQKhse5K4-BLXH-VsWAf"/>
+</div>
+<div class="flex flex-1 flex-col">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-gray-900 dark:text-white">City Care Meds</h4>
+<div class="flex items-center gap-1 rounded bg-green-500/20 px-1.5 py-0.5">
+<span class="material-symbols-outlined text-[14px] text-green-500 filled">verified</span>
+<span class="text-[10px] font-bold text-green-500">Verified</span>
+</div>
+</div>
+<p class="text-xs text-gray-500">1.2 miles • 20-30 min delivery</p>
+<div class="mt-2 flex items-center gap-3">
+<span class="flex items-center text-xs font-medium text-gray-400">
+<span class="material-symbols-outlined mr-1 text-[14px] text-yellow-400 filled">star</span>
+                                    4.5 (850)
+                                </span>
+<span class="text-xs text-gray-600 dark:text-gray-500">Delivery: $2.99</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 z-30 w-full max-w-md bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-border-dark pb-6 pt-3 px-6">
+<ul class="flex items-center justify-between">
+<li>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined filled">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+</li>
+<li>
+<a class="flex flex-col items-center gap-1 text-gray-400 hover:text-gray-200 transition-colors" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="text-[10px] font-medium">Search</span>
+</a>
+</li>
+<li>
+<a class="relative flex flex-col items-center gap-1 -mt-6" href="#">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white shadow-lg ring-4 ring-background-light dark:ring-background-dark">
+<span class="material-symbols-outlined filled">smart_toy</span>
+</div>
+<span class="text-[10px] font-medium text-primary mt-1">AI Chat</span>
+</a>
+</li>
+<li>
+<a class="flex flex-col items-center gap-1 text-gray-400 hover:text-gray-200 transition-colors" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="text-[10px] font-medium">Orders</span>
+</a>
+</li>
+<li>
+<a class="flex flex-col items-center gap-1 text-gray-400 hover:text-gray-200 transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</body></html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Medico AI - Welcome</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-white antialiased overflow-x-hidden selection:bg-primary selection:text-white">
+<div class="relative flex min-h-screen w-full flex-col justify-between">
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col pt-8 pb-4 px-6">
+<!-- Branding / Header -->
+<div class="w-full flex justify-center mb-8 opacity-0 animate-[fadeIn_0.6s_ease-out_forwards]">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center shadow-lg shadow-primary/30">
+<span class="material-symbols-outlined text-white text-[22px]">medical_services</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">Medico AI</span>
+</div>
+</div>
+<!-- Hero Image Section -->
+<div class="w-full relative group mb-8 opacity-0 animate-[fadeIn_0.6s_ease-out_0.2s_forwards]">
+<div class="w-full aspect-[4/5] max-h-[420px] bg-center bg-cover bg-no-repeat rounded-2xl overflow-hidden shadow-2xl shadow-primary/10 relative" data-alt="Futuristic digital human body scan with data points and ai interface" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB4BNlo3RlMq6aIjC6oFk5ezbJvKxDym-aHePbTyY9-EZWILgd8GZaWC6kLQCgRnFTh-cvY24K3QG35Ad2JM32le0hqKk5CQk9g0e2uGJ6C0kOflso9j-Enq2d3FcQKYRO1SVK_9-3eNNPKUYk3VN9Z4ErEIfK_O-1c8Avf6ebHgcxmkWsKhUvWREeeg8HHxgvAcLaJpEil6hmdUdQrO2dzL6QcayQhtKNVv0LIULKStvsWyXPfGjrGPmX9h08kLRCjykTOvwTfGtPX");'>
+<!-- Gradient Overlays for depth -->
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-transparent to-transparent opacity-80"></div>
+<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+</div>
+<!-- Floating Label inside Hero -->
+<div class="absolute bottom-4 left-4 right-4">
+<div class="bg-background-dark/60 backdrop-blur-md border border-white/10 p-3 rounded-xl flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-xl">smart_toy</span>
+</div>
+<div>
+<p class="text-white text-sm font-semibold">AI Sathi Active</p>
+<p class="text-white/60 text-xs">Analyzing symptoms...</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Typography Section -->
+<div class="w-full text-center space-y-3 mb-8 opacity-0 animate-[fadeIn_0.6s_ease-out_0.4s_forwards]">
+<h1 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-[1.15]">
+                    Healthcare <br class="md:hidden"/>
+<span class="text-primary relative inline-block">
+                        Reimagined
+                        <svg class="absolute -bottom-1 left-0 w-full h-1.5 text-primary/40" preserveaspectratio="none" viewbox="0 0 100 10">
+<path d="M0 5 Q 50 10 100 5" fill="none" stroke="currentColor" stroke-width="2"></path>
+</svg>
+</span>
+</h1>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal leading-relaxed max-w-[320px] mx-auto">
+                    Experience the future of medical care with instant AI analysis and expert verification.
+                </p>
+</div>
+<!-- Feature Preview (StoryCarousel adaptation) -->
+<div class="w-full overflow-hidden opacity-0 animate-[fadeIn_0.6s_ease-out_0.6s_forwards]">
+<p class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-600 mb-3 px-1 text-center">Core Features</p>
+<div class="flex flex-row items-center justify-center gap-3">
+<!-- Item 1 -->
+<div class="flex flex-col gap-2 w-24 text-center">
+<div class="w-full aspect-square rounded-xl bg-slate-100 dark:bg-slate-800/50 flex items-center justify-center border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+</div>
+<p class="text-slate-900 dark:text-white text-[11px] font-medium leading-normal">AI Sathi</p>
+</div>
+<!-- Item 2 -->
+<div class="flex flex-col gap-2 w-24 text-center">
+<div class="w-full aspect-square rounded-xl bg-slate-100 dark:bg-slate-800/50 flex items-center justify-center border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-primary text-3xl">medical_information</span>
+</div>
+<p class="text-slate-900 dark:text-white text-[11px] font-medium leading-normal">Expert Docs</p>
+</div>
+<!-- Item 3 -->
+<div class="flex flex-col gap-2 w-24 text-center">
+<div class="w-full aspect-square rounded-xl bg-slate-100 dark:bg-slate-800/50 flex items-center justify-center border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-primary text-3xl">monitor_heart</span>
+</div>
+<p class="text-slate-900 dark:text-white text-[11px] font-medium leading-normal">Tracking</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer / Action Area -->
+<div class="w-full px-6 py-6 pb-10 bg-background-light dark:bg-background-dark z-20">
+<!-- Page Indicators -->
+<div class="flex w-full flex-row items-center justify-center gap-2 mb-6">
+<div class="h-1.5 w-6 rounded-full bg-primary transition-all duration-300"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-slate-300 dark:bg-slate-700 transition-all duration-300"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-slate-300 dark:bg-slate-700 transition-all duration-300"></div>
+</div>
+<!-- Primary Button -->
+<button class="w-full h-14 bg-primary hover:bg-primary/90 active:scale-[0.98] transition-all text-white text-base font-bold rounded-xl shadow-lg shadow-primary/25 flex items-center justify-center gap-2 group">
+<span>Get Started</span>
+<span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<!-- Secondary Link -->
+<div class="mt-5 text-center">
+<p class="text-sm text-slate-500 dark:text-slate-400">
+                    Already have an account? 
+                    <a class="text-primary font-semibold hover:text-primary/80 transition-colors" href="#">Log in</a>
+</p>
+</div>
+</div>
+</div>
+<!-- Animation Keyframes -->
+<style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</body></html>

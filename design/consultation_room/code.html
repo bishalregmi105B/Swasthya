@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Consultation Room</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-white h-screen flex flex-col overflow-hidden relative">
+<!-- Top Navigation Bar -->
+<!-- Adaptation of TopAppBar component -->
+<header class="flex items-center justify-between px-4 py-3 bg-background-light dark:bg-background-dark z-20 shrink-0 border-b border-slate-200 dark:border-slate-800/50">
+<div class="flex items-center gap-3">
+<!-- Doctor Avatar with Status -->
+<div class="relative shrink-0">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 ring-2 ring-primary/20" data-alt="Profile picture of Dr. Sarah Johnson" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAXdQdBbdCkEWSbLEkA6BmPjBIkYDedxBKrKXpD2s7hdK954Br4uYch6Qmz9lqtsbe4J6_C0qgRPlLO9ZAV-xU36I0rtI6FChFJu09IIpDjbz1t8dCrSny2sVzC0EuFuHn5rR4Zhw_-_L3FIyMq3gOa0oEU9eYkVH1JvLjDOZ_PEPKKY0ZHGWedZffxqSaUvTpz0_zMEnJn4ksSF2K2ZERBNWQdrSmyBgCbudMHzbD_3XcBQBhHX3XT_4rlGBbRi3K2oS2lMy8nav7J");'>
+</div>
+<!-- Online Status Dot -->
+<div class="absolute bottom-0 right-0 size-2.5 bg-emerald-500 rounded-full border-2 border-background-light dark:border-background-dark"></div>
+</div>
+<div class="flex flex-col">
+<h2 class="text-base font-bold leading-tight text-slate-900 dark:text-white">Dr. Sarah Johnson</h2>
+<!-- MetaText integration -->
+<div class="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400 font-medium tracking-wide">
+<span class="material-symbols-outlined text-[12px] text-primary" data-icon="lock">lock</span>
+<span>Encrypted</span>
+<span class="text-slate-300 dark:text-slate-700">•</span>
+<span class="font-mono tabular-nums text-primary">05:23</span>
+</div>
+</div>
+</div>
+<button class="bg-red-500/10 hover:bg-red-500/20 active:bg-red-500/30 text-red-600 dark:text-red-400 px-4 py-2 rounded-full text-sm font-bold transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="call_end">call_end</span>
+<span class="hidden sm:inline">End Call</span>
+</button>
+</header>
+<!-- Main Content Area -->
+<main class="relative flex-1 w-full px-0 sm:px-4 py-0 sm:py-4 overflow-hidden flex flex-col items-center justify-center">
+<!-- Video Container (MediaPlayer Component Concept) -->
+<!-- Using full height minus margins for mobile feel -->
+<div class="relative w-full h-full sm:rounded-2xl overflow-hidden shadow-2xl bg-slate-900 ring-1 ring-slate-900/10">
+<!-- Doctor Video Feed -->
+<div class="absolute inset-0 bg-center bg-cover" data-alt="High quality video feed of the doctor speaking" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBP3h7YYBFcS-8yhvEpqZ8sIVKi7mhv0qYs6AY0gtvFaGzgSHTJacqv3N_2_E7UcEQd_n7VsmISSXAbc3PqEFJGUiLHOkIsyfFyFZCJ0iVECPO9XCV_2_ACQjMhut_NaGLc9lRFe9fE2l6lVJXYBrQ-Di4JPqoqc0E44hp6iWKlveeW4rng4AEEka8zK4VH7HDUsyupeQgSWHD3Fr7mTcYX4wMz1vtiY9Wl99kjJnx1WJ556GnGaCSri1vnKNju7brvr_noGXTLC0OV");'>
+<!-- Dark Gradient Overlay for better text legibility at bottom -->
+<div class="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-background-dark/90 via-background-dark/40 to-transparent"></div>
+</div>
+<!-- PIP (Patient/Self View) -->
+<div class="absolute top-4 right-4 w-28 aspect-[3/4] bg-slate-800 rounded-xl overflow-hidden ring-1 ring-white/20 shadow-2xl z-10 cursor-move">
+<div class="w-full h-full bg-center bg-cover" data-alt="Small thumbnail video feed of the patient" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC-xiwn2F4ilBZtlvhW3i0Ta1EKalycncOh1E2GIKEgta1OyrlpO9-ce6i6-O_GqWBRKpmR3bXud6aAPSBUY1SUlTQUubJUEaF5fnJen4RYa1Qzh0F23epPKYnvzhx8WP5iSCK6vseEn0HC6kkuURujpD_16s6PxsBcADrGtmDvJlDyB_sYdjsw_bsGtuAElBjYmBxyxbbwX8y8QllqWvucgkEvCXWL32Kw02v8JmZ0gIcrgYX88-u-Wlh83wfbGamiFU_eGRBHliIU");'>
+</div>
+<!-- Mute indicator for self -->
+<div class="absolute bottom-2 right-2 bg-black/60 p-1 rounded-full text-white backdrop-blur-sm">
+<span class="material-symbols-outlined text-[12px] block" data-icon="mic_off">mic_off</span>
+</div>
+</div>
+<!-- AI Insight Toast (Overlay) -->
+<div class="absolute bottom-4 left-4 right-4 z-20">
+<!-- HeadlineText & MetaText adaptation for AI -->
+<div class="bg-background-dark/80 backdrop-blur-xl border border-white/10 p-3 rounded-xl flex items-start gap-3 shadow-lg animate-in slide-in-from-bottom-5 duration-500">
+<div class="bg-primary/20 p-2 rounded-lg shrink-0 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" data-icon="medical_services">medical_services</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-center mb-0.5">
+<h3 class="text-white text-sm font-bold tracking-tight">AI Clinical Note</h3>
+<span class="text-[10px] text-slate-400 font-medium uppercase tracking-wider bg-white/5 px-1.5 py-0.5 rounded">Just Now</span>
+</div>
+<p class="text-slate-300 text-xs leading-relaxed truncate">"Patient reports recurring migraines triggered by bright lights."</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Control Dock (Bottom) -->
+<nav class="shrink-0 pb-8 pt-4 px-6 bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-slate-800/50 z-20">
+<div class="flex items-center justify-between max-w-sm mx-auto">
+<!-- Mic Toggle -->
+<button class="flex flex-col items-center gap-1.5 group w-16">
+<div class="size-14 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-700 dark:text-white group-active:scale-95 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[24px]" data-icon="mic_off">mic_off</span>
+</div>
+<span class="text-[11px] font-medium text-slate-500 dark:text-slate-400">Mute</span>
+</button>
+<!-- Video Toggle -->
+<button class="flex flex-col items-center gap-1.5 group w-16">
+<div class="size-14 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-700 dark:text-white group-active:scale-95 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[24px]" data-icon="videocam">videocam</span>
+</div>
+<span class="text-[11px] font-medium text-slate-500 dark:text-slate-400">Video</span>
+</button>
+<!-- Chat Toggle (Primary Action) -->
+<button class="flex flex-col items-center gap-1.5 group w-16">
+<div class="size-14 rounded-full bg-primary flex items-center justify-center text-white group-active:scale-95 transition-all shadow-lg shadow-primary/25 relative ring-4 ring-primary/10">
+<span class="material-symbols-outlined text-[24px]" data-icon="chat_bubble">chat_bubble</span>
+<span class="absolute top-0 right-0 translate-x-1 -translate-y-1 flex size-4 items-center justify-center">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full size-2.5 bg-red-500"></span>
+</span>
+</div>
+<span class="text-[11px] font-bold text-primary">Chat</span>
+</button>
+<!-- Flip Camera -->
+<button class="flex flex-col items-center gap-1.5 group w-16">
+<div class="size-14 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-700 dark:text-white group-active:scale-95 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[24px]" data-icon="flip_camera_ios">flip_camera_ios</span>
+</div>
+<span class="text-[11px] font-medium text-slate-500 dark:text-slate-400">Flip</span>
+</button>
+</div>
+</nav>
+<!-- Simulated Bottom Sheet Handle (Visual cue for Chat Drawer) -->
+<div class="absolute bottom-[6.5rem] left-1/2 -translate-x-1/2 w-12 h-1 bg-slate-300 dark:bg-slate-600 rounded-full opacity-50 z-30 pointer-events-none"></div>
+</body></html>
