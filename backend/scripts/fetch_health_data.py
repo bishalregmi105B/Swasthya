@@ -1,16 +1,4 @@
 #!/usr/bin/env python3
-"""
-Health Data Cron Job Script
-Run this script via cPanel cron job to periodically fetch and cache health data
-
-Usage (cPanel cron):
-  */30 * * * * /usr/bin/python3 /path/to/swasthya/backend/scripts/fetch_health_data.py >> /path/to/logs/health_data.log 2>&1
-
-This script:
-1. Fetches weather, disease, earthquake, climate data for configured countries
-2. Saves to JSON files for caching
-3. Can optionally push alerts via OneSignal
-"""
 
 import os
 import sys
