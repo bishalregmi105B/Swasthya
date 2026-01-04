@@ -9,6 +9,28 @@
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![AI](https://img.shields.io/badge/g4f_Multi--Model_AI-FF6B6B?style=for-the-badge&logo=openai&logoColor=white)
 
+### 🎬 [Watch Demo Video](https://youtu.be/sQuu03ye_3k)
+
+---
+
+## 📑 Quick Navigation
+
+| Documentation | Screenshots |
+|---------------|-------------|
+| [🎯 Problem Statement](#-problem-statement) | [📸 Screenshots](#-screenshots) |
+| [💡 Solution](#-our-solution) | [🏠 Home Dashboard](#home-dashboard) |
+| [✨ Features](#-key-features) | [🤖 AI Specialists](#ai-specialists) |
+| [🛠️ Tech Stack](#️-tech-stack) | [📋 Medical History](#medical-history) |
+| [🏗️ Architecture](#️-architecture) | [🚨 Emergency Services](#emergency-services) |
+| [📁 Project Structure](#-project-structure) | [🏥 Hospitals & Doctors](#hospitals--doctors) |
+| [🚀 Setup](#-setup--installation) | [🎮 Training Simulations](#training-simulations) |
+| [🏆 Innovation](#-innovation-highlights) | [🌡️ Health Tools](#health-tools) |
+
+**Separate README Files:**
+- 📱 [Mobile App README](mobile/README.md)
+- ⚙️ [Backend API README](backend/README.md)
+- 🌐 [Web Dashboard README](web/README.md)
+
 ---
 
 ## 🎯 Problem Statement
@@ -292,7 +314,56 @@ npm run dev
 
 ---
 
-## 👥 Team
+## � Screenshots
+
+### Home Dashboard
+| Dashboard | Health Tips | Quick Actions |
+|-----------|-------------|---------------|
+| ![Home](Screenshots/Screenshot_2026-01-03-18-09-12-767_com.example.swasthya.jpg) | ![Tips](Screenshots/Screenshot_2026-01-03-17-52-55-736_com.example.swasthya.jpg) | ![Actions](Screenshots/Screenshot_2026-01-04-07-28-48-084_com.example.swasthya.jpg) |
+
+### AI Specialists
+| AI Categories | Voice Call | Chat Interface |
+|---------------|------------|----------------|
+| ![Categories](Screenshots/Screenshot_2026-01-03-18-09-25-477_com.example.swasthya.jpg) | ![Voice](Screenshots/Screenshot_2026-01-03-18-09-37-495_com.example.swasthya.jpg) | ![Chat](Screenshots/Screenshot_2026-01-03-18-10-34-884_com.example.swasthya.jpg) |
+
+### Medical History
+| Medical Records | AI Analysis | Document Upload |
+|-----------------|-------------|-----------------|
+| ![Records](Screenshots/Screenshot_2026-01-03-18-10-46-416_com.example.swasthya.jpg) | ![AI](Screenshots/Screenshot_2026-01-03-18-11-21-786_com.example.swasthya.jpg) | ![Upload](Screenshots/Screenshot_2026-01-03-18-11-44-537_com.example.swasthya.jpg) |
+
+### Hospitals & Doctors
+| Doctor Search | Hospital Performance | Bookings |
+|---------------|---------------------|----------|
+| ![Doctors](Screenshots/Screenshot_2026-01-03-18-11-52-858_com.example.swasthya.jpg) | ![Hospitals](Screenshots/Screenshot_2026-01-03-18-17-12-194_com.example.swasthya.jpg) | ![Book](Screenshots/Screenshot_2026-01-03-18-18-17-030_com.example.swasthya.jpg) |
+
+### Emergency Services
+| SOS Button | Quick Dial | Emergency Contacts |
+|------------|------------|-------------------|
+| ![SOS](Screenshots/Screenshot_2026-01-03-18-12-23-759_com.example.swasthya.jpg) | ![Dial](Screenshots/Screenshot_2026-01-03-18-12-29-826_com.example.swasthya.jpg) | ![Contacts](Screenshots/Screenshot_2026-01-03-18-12-40-906_com.example.swasthya.jpg) |
+
+### Training Simulations
+| CPR Training | First Aid | AI Coach |
+|--------------|-----------|----------|
+| ![CPR](Screenshots/Screenshot_2026-01-03-18-13-37-465_com.example.swasthya.jpg) | ![FirstAid](Screenshots/Screenshot_2026-01-03-18-14-13-950_com.example.swasthya.jpg) | ![Coach](Screenshots/Screenshot_2026-01-03-18-14-47-802_com.example.swasthya.jpg) |
+
+### Health Tools
+| Disease Surveillance | Weather Health | Blood Banks |
+|---------------------|----------------|-------------|
+| ![Disease](Screenshots/Screenshot_2026-01-03-18-16-08-975_com.example.swasthya.jpg) | ![Weather](Screenshots/Screenshot_2026-01-03-18-16-25-392_com.example.swasthya.jpg) | ![Blood](Screenshots/Screenshot_2026-01-03-18-19-51-322_com.example.swasthya.jpg) |
+
+### Medicine & Reminders
+| Drug Search | Reminders | Pharmacies |
+|-------------|-----------|------------|
+| ![Drugs](Screenshots/Screenshot_2026-01-03-18-18-47-004_com.example.swasthya.jpg) | ![Remind](Screenshots/Screenshot_2026-01-03-18-18-57-220_com.example.swasthya.jpg) | ![Pharmacy](Screenshots/Screenshot_2026-01-03-18-24-52-659_com.example.swasthya.jpg) |
+
+### Profile & Settings
+| Profile | Settings |
+|---------|----------|
+| ![Profile](Screenshots/Screenshot_2026-01-03-18-25-00-763_com.example.swasthya.jpg) | ![Settings](Screenshots/Screenshot_2026-01-04-07-28-58-435_com.example.swasthya.jpg) |
+
+---
+
+## �👥 Team
 
 **Team Swasthya** - LOCUS Hackathon 2026
 
